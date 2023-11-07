@@ -1,0 +1,38 @@
+
+.container{
+    margin: 0 auto;
+    background-color: #000814;
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 500px;
+    height: 400px;
+    margin-top: 50px
+}
+
+.container img{
+    margin-top: 50px;
+    width: 300px;
+    height: 300px;
+    border-radius: 100px;
+    border: 1px solid black;
+}
+
+.iconsCntnrt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.git,
+.linkedin{
+    color: #efefef;
+}
+
+.git:hover,
+.linkedin:hover{
+    color: cornflowerblue;
+    cursor: pointer;
+}
+
