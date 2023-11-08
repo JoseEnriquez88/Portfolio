@@ -1,31 +1,34 @@
-import style from "./navbar.module.css";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import DownloadIcon from "@mui/icons-material/Download";
+import style from "./navbar.module.css";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import screenIco from "../../assets/screenIco.png";
 import resume from "../../assets/spanishResume.pdf";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
 
 const NavBar = () => {
+  const [navOpen, setNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setNavOpen(!navOpen);
+  };
+
   return (
     <header className={style.header}>
-      <nav className={style.navbar}>
-        <div className={style.icons}>
-          <a href="https://www.linkedin.com/in/joseenriquez80/">
-            <LinkedInIcon />
-          </a>
-          <a href="https://github.com/JoseEnriquez88">
-            <GitHubIcon />
-          </a>
-        </div>
-
-        <div className={style.buttons}>
-          <Link to="/">Inicio</Link>
-          <Link to="/about">Sobre Mi</Link>
-          <Link to="/contact">Contacto</Link>
-          <a href={resume} download="resume.pdf">
-            Descargar CV <DownloadIcon />
-          </a>
-        </div>
+      <Link to="/">
+        <img src={screenIco} alt="img" className={style.logo} title="Inicio" />
+      </Link>
+      <i className={style.menuIcon} onClick={toggleNav}>
+        {navOpen ? <CloseIcon /> : <MenuIcon />}
+      </i>
+      <nav className={`${style.navbar} ${navOpen ? style.open : ""}`}>
+        <Link to="/">Inicio</Link>
+        <Link to="/about">Sobre mi</Link>
+        <Link to="/project">Proyectos</Link>
+        <Link to="/contact">Contacto</Link>
+        <a href={resume} download="resume.pdf">
+          Descargar CV
+        </a>
       </nav>
     </header>
   );
