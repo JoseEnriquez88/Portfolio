@@ -6,8 +6,7 @@ import Landing from '../Landing/Landing';
 const Home = () => {
   return (
     <div>
-      <NavBar />
-      <Landing />
+      
     </div>
   );
 }

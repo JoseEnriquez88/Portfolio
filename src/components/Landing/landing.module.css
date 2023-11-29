@@ -1,38 +1,33 @@
-
-.container{
-    margin: 0 auto;
-    background-color: #000814;
-    border: 1px solid black;
-    border-radius: 50px;
-    width: 500px;
-    height: 400px;
-    margin-top: 50px
+.container {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  position: relative;
 }
 
-.container img{
-    margin-top: 50px;
-    width: 300px;
-    height: 300px;
-    border-radius: 100px;
-    border: 1px solid black;
+.wrapper{
+    max-width: 1355px;
+    height: 100%;
+    margin: auto;
 }
 
-.iconsCntnrt{
+.textContainer{
+    width: 100%;
+    height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 20px;
+    gap: 40px;
 }
 
-.git,
-.linkedin{
-    color: #efefef;
+.textContainer h2{
+    font-size: 30px;
+    color: rebeccapurple;
+    letter-spacing: 10px;
 }
 
-.git:hover,
-.linkedin:hover{
-    color: cornflowerblue;
-    cursor: pointer;
+.textContainer h1{
+    font-size: 88px;
+    color: #ececec;;
 }
+
 
