@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import style from "./navbar.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -21,7 +22,12 @@ const NavBar = () => {
       <i className={style.menuIcon} onClick={toggleNav}>
         {navOpen ? <CloseIcon /> : <MenuIcon />}
       </i>
-      <nav className={`${style.navbar} ${navOpen ? style.open : ""}`}>
+      <motion.nav
+        className={`${style.navbar} ${navOpen ? style.open : ""}`}
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <Link to="/">Inicio</Link>
         <Link to="/about">Sobre mi</Link>
         <Link to="/project">Proyectos</Link>
@@ -29,7 +35,7 @@ const NavBar = () => {
         <a href={resume} download="resume.pdf">
           Descargar CV
         </a>
-      </nav>
+      </motion.nav>
     </header>
   );
 };
