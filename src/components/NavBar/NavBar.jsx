@@ -1,7 +1,7 @@
+import style from "./navbar.module.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import style from "./navbar.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import screenIco from "../../assets/screenIco.png";
