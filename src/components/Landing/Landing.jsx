@@ -49,7 +49,7 @@ const Landing = () => {
           animate="animate"
         >
           <motion.h2 variants={textVariants}>Jose Enriquez</motion.h2>
-          <motion.h1 variants={textVariants}>Full Stack Developer</motion.h1>
+          <motion.h1 variants={textVariants}>Web Developer</motion.h1>
         </motion.div>
       </div>
     </div>

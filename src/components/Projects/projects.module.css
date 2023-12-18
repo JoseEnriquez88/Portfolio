@@ -14,7 +14,7 @@
   color: #ececec;
 }
 
-.aboutContainer {
+.projectContainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,16 +25,3 @@
   backdrop-filter: blur(10px);
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
-
-/* 
-.textarea {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  width: 80%;
-  height: 400px;
-  box-sizing: border-box;
-  resize: vertical;
-  max-height: 30%;
-  color: #ececec;
-} */

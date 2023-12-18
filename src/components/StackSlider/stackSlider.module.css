@@ -1,0 +1,30 @@
+@keyframes slide {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-127%));
+  }
+}
+
+.slider {
+  overflow: hidden;
+  padding: 60px 0;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.slide {
+  display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  animation: 35s slide infinite linear;
+}
+
+.img {
+  height: 100px;
+  margin: 0 20px;
+}
