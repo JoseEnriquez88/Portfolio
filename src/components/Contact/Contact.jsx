@@ -1,13 +1,15 @@
 import styles from "./contact.module.css";
 import { motion } from "framer-motion";
+import EmailIcon from "@mui/icons-material/Email";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const variants = {
   initial: {
-    y: 500,
+    x: -500,
     opacity: 0,
   },
   animate: {
-    y: 0,
+    x: 0,
     opacity: 1,
     trasition: {
       duration: 0.5,
@@ -22,18 +24,29 @@ const Contact = () => {
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.textContainer}>
-            <h1>Contacta conmigo!</h1>
+            <motion.h1
+              variants={variants}
+              initial="initial"
+              animate="animate"
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              Let's get in touch!
+            </motion.h1>
             <div className={styles.itemsContainer}>
-              <h2>Mail</h2>
-              <span>contacto@contac.com</span>
+              <h2>
+                <EmailIcon className={styles.icon} /> 
+                
+                Mail
+              </h2>
+              <span>eenriquez.jose@gmail.com</span>
             </div>
             <div className={styles.itemsContainer}>
-              <h2>Calle</h2>
-              <span>742 Evergreen Terrace</span>
-            </div>
-            <div className={styles.itemsContainer}>
-              <h2>Teléfono</h2>
-              <span>+1 234 5678</span>
+              <h2>
+                <WhatsAppIcon className={styles.icon} />
+                Phone
+              </h2>
+              <span>+54 379 4277204</span>
             </div>
           </div>
           <div className={styles.formContainer}>
@@ -42,29 +55,29 @@ const Contact = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               // transition={{ delay: 1, duration: 1 }}
-              transition={{ duration: 3 }}
+              transition={{ duration: 4 }}
             >
               <input
                 type="text"
                 name="name"
                 required
-                placeholder="Nombre"
+                placeholder="Name"
                 className={styles.input}
               />
               <input
                 type="email"
                 name="email"
                 required
-                placeholder="Mail"
+                placeholder="Email"
                 className={styles.input}
               />
               <textarea
                 name="message"
                 rows={8}
-                placeholder="Mensaje"
+                placeholder="Message"
                 className={styles.textarea}
               />
-              <button className={styles.button}>Enviar</button>
+              <button className={styles.button}>Send</button>
             </motion.form>
           </div>
         </div>

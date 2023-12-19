@@ -1,5 +1,8 @@
 import styles from "./landing.module.css";
 import { motion } from "framer-motion";
+import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
+import resume from "../../assets/resume/englishResume.pdf";
+import svg from "../../assets/SVG/landingSVG.png";
 
 const textVariants = {
   initial: {
@@ -48,8 +51,15 @@ const Landing = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>Jose Enriquez</motion.h2>
-          <motion.h1 variants={textVariants}>Web Developer</motion.h1>
+          <motion.h1 variants={textVariants} className={styles.name}>
+            Jose Enriquez
+          </motion.h1>
+          <motion.h2 variants={textVariants}>Full Stack Developer</motion.h2>
+          <button className={styles.button}>
+            <a href={resume} download="englishResume.pdf">
+              Resume <CloudDownloadIcon />
+            </a>
+          </button>
         </motion.div>
       </div>
     </div>

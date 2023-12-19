@@ -1,11 +1,10 @@
-import style from "./navbar.module.css";
+import styles from "./navbar.module.css";
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import screenIco from "../../assets/screenIco.png";
-import resume from "../../assets/spanishResume.pdf";
+import logo from "../../assets/logo.png";
 
 const variants = {
   open: {
@@ -40,20 +39,28 @@ const NavBar = () => {
   };
 
   return (
-    <header className={style.header}>
-      <Link to="/">
-        <img src={screenIco} alt="img" className={style.logo} title="Inicio" />
-      </Link>
-      <i className={style.menuIcon} onClick={toggleNav}>
+    <header className={styles.header}>
+      <div className={styles.tooltipContainer}>
+        <Link to="home">
+          <img
+            src={logo}
+            alt="img"
+            className={styles.logo}
+            // title="Logo by Danang Mulyo Saputro "
+          />
+          <span className={styles.tooltip}>Logo by Danang Mulyo Saputro</span>
+        </Link>
+      </div>
+      <i className={styles.menuIcon} onClick={toggleNav}>
         {navOpen ? <CloseIcon /> : <MenuIcon />}
       </i>
       <nav
-        className={`${style.navbar} ${navOpen ? style.open : ""}`}
+        className={`${styles.navbar} ${navOpen ? styles.open : ""}`}
         // initial={{ opacity: 0, scale: 0.5 }}
         // animate={{ opacity: 1, scale: 1 }}
         // transition={{ duration: 0.5 }}
       >
-        <div className={style.itemsContainer}>
+        <div className={styles.itemsContainer}>
           <ul>
             <li>
               <Link to="home">Home</Link>
