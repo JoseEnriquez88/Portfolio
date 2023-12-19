@@ -36,7 +36,6 @@ const Contact = () => {
             <div className={styles.itemsContainer}>
               <h2>
                 <EmailIcon className={styles.icon} /> 
-                
                 Mail
               </h2>
               <span>eenriquez.jose@gmail.com</span>
