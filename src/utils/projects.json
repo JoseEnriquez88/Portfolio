@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Glamify",
+      "type": "E-commerce",
+      "repo": "https://github.com/JoseEnriquez88/GLAMIFY",
+      "deploy": null,
+      "image": "/landingGlamify.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Agilix",
+      "type": "POS",
+      "repo": "https://github.com/JoseEnriquez88/Agilix",
+      "deploy": null,
+      "image": "/loginAgilix.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Poke App",
+      "type": "Pokedex",
+      "repo": "https://github.com/JoseEnriquez88/Pokemon",
+      "deploy": "https://pokemon-jose-enriquez-88.vercel.app/",
+      "image": "/homePoke.png"
+    },
+    {
+      "id": 4,
+      "name": "Rick & Morty",
+      "type": "Interactive R&M",
+      "repo": "https://github.com/JoseEnriquez88/Rick_And_Morty",
+      "deploy": null,
+      "image": "/homeRAM.png"
+    }
+  ]
+}

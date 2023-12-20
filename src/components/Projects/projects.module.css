@@ -20,8 +20,27 @@
   justify-content: center;
   height: 100vh;
   width: 100%;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.1);
+  /* background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2); */
+}
+
+.textContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.title {
+  font-size: 88px;
+  color: #385170;
+  letter-spacing: 10px;
+}
+
+.cardsContainer {
+  margin: 0 auto;
+  width: 100%;
 }

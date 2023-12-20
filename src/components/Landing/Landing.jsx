@@ -57,7 +57,7 @@ const Landing = () => {
           <motion.h2 variants={textVariants}>Full Stack Developer</motion.h2>
           <button className={styles.button}>
             <a href={resume} download="englishResume.pdf">
-              Resume <CloudDownloadIcon />
+              <CloudDownloadIcon /> Resume
             </a>
           </button>
         </motion.div>
