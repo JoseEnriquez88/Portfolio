@@ -62,8 +62,8 @@ const About = () => {
               className={styles.about}
               variants={h1Variants}
               initial="initial"
-              ref={ref}
               animate={isInView && "animate"}
+              ref={ref}
             >
               About Me
             </motion.h1>
@@ -73,7 +73,7 @@ const About = () => {
               initial="initial"
               ref={ref}
               animate={isInView && "animate"}
-              onScroll="visible"
+              // onScroll="visible"
             >
               I'm a web developer with strong skills in HTML, CSS, and
               JavaScript, allowing me to create appealing interfaces. I also

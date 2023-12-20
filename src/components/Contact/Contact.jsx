@@ -1,9 +1,11 @@
 import styles from "./contact.module.css";
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import EmailIcon from "@mui/icons-material/Email";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
-const variants = {
+const h1Variants = {
   initial: {
     x: -500,
     opacity: 0,
@@ -11,45 +13,111 @@ const variants = {
   animate: {
     x: 0,
     opacity: 1,
-    trasition: {
-      duration: 0.5,
+    transition: {
+      duration: 1,
       staggerChildren: 0.1,
+    },
+  },
+  scrollButton: {
+    opacity: 0,
+    y: 10,
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+    },
+  },
+};
+
+const containerVariants = {
+  intial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+const slideVariants = {
+  initial: {
+    y: 500,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
     },
   },
 };
 
 const Contact = () => {
+  const ref = useRef();
+  const formRef = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
+
+  const sendEmail = (event) => {
+    event.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_b5at8ue",
+        "template_rliwto9",
+        formRef.current,
+        "vxpkT-TbZOwb3eaHL"
+      )
+      .then(
+        (result) => {
+          setSuccess(true);
+        },
+        (error) => {
+          setError(true);
+        }
+      );
+  };
+
   return (
     <div className={styles.mainContainer}>
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.textContainer}>
             <motion.h1
-              variants={variants}
+              variants={h1Variants}
               initial="initial"
-              animate="animate"
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1 }}
+              animate={isInView && "animate"}
+              ref={ref}
             >
               Let's get in touch!
             </motion.h1>
-            <div className={styles.itemsContainer}>
-              <h2>
-                <EmailIcon className={styles.icon} /> 
+            <motion.div
+              className={styles.itemsContainer}
+              variants={containerVariants}
+              animate={isInView && "animate"}
+              ref={ref}
+            >
+              <motion.h2 variants={slideVariants}>
+                <EmailIcon className={styles.icon} />
                 Mail
-              </h2>
-              <span>eenriquez.jose@gmail.com</span>
-            </div>
-            <div className={styles.itemsContainer}>
-              <h2>
+              </motion.h2>
+              <motion.span variants={slideVariants}>
+                eenriquez.jose@gmail.com
+              </motion.span>
+              <motion.h2 variants={slideVariants}>
                 <WhatsAppIcon className={styles.icon} />
                 Phone
-              </h2>
-              <span>+54 379 4277204</span>
-            </div>
+              </motion.h2>
+              <motion.span variants={slideVariants}>
+                +54 379 4277204
+              </motion.span>
+            </motion.div>
           </div>
           <div className={styles.formContainer}>
             <motion.form
+              ref={formRef}
+              onSubmit={sendEmail}
               className={styles.form}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
