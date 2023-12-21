@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "react-hot-toast";
 import contact from "../../assets/SVG/contact.png";
+import Footer from "../Footer/Footer";
 
 const h1Variants = {
   initial: {
@@ -203,6 +204,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

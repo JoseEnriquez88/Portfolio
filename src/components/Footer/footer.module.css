@@ -1,0 +1,52 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  color: #ececec;
+  width: 100%;
+  z-index: 2;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.linksContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.img,
+.icon {
+  width: 27px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.img:hover,
+.icon:hover {
+  transition: filter 0.3s ease, transform 0.3s ease;
+  filter: grayscale(0%);
+  transform: scale(1.1);
+  color: black;
+}
+
+.logo {
+  width: 25px;
+  margin-left: -18px;
+}
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
