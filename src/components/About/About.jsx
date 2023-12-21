@@ -75,7 +75,6 @@ const About = () => {
                 initial="initial"
                 ref={ref}
                 animate={isInView && "animate"}
-                // onScroll="visible"
               >
                 I am a web developer with strong skills in HTML, CSS, and
                 JavaScript, enabling me to create appealing interfaces.
