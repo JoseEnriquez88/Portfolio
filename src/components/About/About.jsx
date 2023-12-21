@@ -69,21 +69,23 @@ const About = () => {
               >
                 About Me
               </motion.h1>
-              <motion.span
-                className={styles.text}
-                variants={spanVariants}
-                initial="initial"
-                ref={ref}
-                animate={isInView && "animate"}
-              >
-                I am a web developer with strong skills in HTML, CSS, and
-                JavaScript, enabling me to create appealing interfaces.
-                Furthermore, I have experience in developing web applications
-                using technologies such as React, Next, and Redux/Toolkit. On
-                the server side, I employ Express and relational databases like
-                SQL, Prisma, and PostgreSQL to ensure efficient performance and
-                effective data management.
-              </motion.span>
+              <div className={styles.bioContainer}>
+                <motion.p
+                  className={styles.text}
+                  variants={spanVariants}
+                  initial="initial"
+                  ref={ref}
+                  animate={isInView && "animate"}
+                >
+                  I am a web developer with strong skills in HTML, CSS, and
+                  JavaScript, enabling me to create appealing interfaces.
+                  Furthermore, I have experience in developing web applications
+                  using technologies such as React, Next, and Redux/Toolkit. On
+                  the server side, I employ Express and relational databases
+                  like SQL, Prisma, and PostgreSQL to ensure efficient
+                  performance and effective data management.
+                </motion.p>
+              </div>
             </div>
             <div className={styles.imageContainer}>
               <img
