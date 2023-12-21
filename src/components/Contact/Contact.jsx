@@ -66,7 +66,7 @@ const Contact = () => {
   const isInView = useInView(ref, { margin: "-100px" });
   const [formData, setFormData] = useState({
     name: "",
-    mail: "",
+    email: "",
     message: "",
   });
 
@@ -94,7 +94,7 @@ const Contact = () => {
 
     if (
       formData.name === "" ||
-      formData.mail === "" ||
+      formData.email === "" ||
       formData.message === ""
     ) {
       warnNotify();
@@ -169,11 +169,11 @@ const Contact = () => {
                 onChange={handleChange}
               />
               <input
-                type="mail"
-                name="mail"
+                type="email"
+                name="email"
                 // required
-                value={formData.mail}
-                placeholder="Mail"
+                value={formData.email}
+                placeholder="Email"
                 className={styles.input}
                 onChange={handleChange}
               />
