@@ -88,7 +88,7 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (
@@ -100,7 +100,7 @@ const Contact = () => {
       return;
     }
 
-    emailjs
+    await emailjs
       .sendForm(
         "service_b5at8ue",
         "template_rliwto9",
