@@ -46,9 +46,8 @@ const NavBar = () => {
             src={logo}
             alt="img"
             className={styles.logo}
-            // title="Logo by Danang Mulyo Saputro "
           />
-          <span className={styles.tooltip}>Logo by Danang Mulyo Saputro</span>
+        {/* <span className={styles.tooltip}>Logo by Danang Mulyo Saputro</span> */}
         </Link>
       </div>
       <i className={styles.menuIcon} onClick={toggleNav}>
