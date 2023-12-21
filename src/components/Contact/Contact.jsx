@@ -105,7 +105,7 @@ const Contact = () => {
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
         formRef.current,
-        import.meta.env.VITE_USER_ID
+        "vxpkT-TbZOwb3eaHL"
       )
       .then(
         (result) => {
