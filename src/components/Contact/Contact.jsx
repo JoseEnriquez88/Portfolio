@@ -102,8 +102,8 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
+        "service_b5at8ue",
+        "template_rliwto9",
         formRef.current,
         "vxpkT-TbZOwb3eaHL"
       )
