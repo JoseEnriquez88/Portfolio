@@ -2,6 +2,7 @@ import styles from "./about.module.css";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import StackSlider from "../StackSlider/StackSlider";
+import about from "../../assets/SVG/about.png";
 
 const h1Variants = {
   initial: {
@@ -57,31 +58,41 @@ const About = () => {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.aboutContainer}>
-          <div className={styles.textContainer}>
-            <motion.h1
-              className={styles.about}
-              variants={h1Variants}
-              initial="initial"
-              animate={isInView && "animate"}
-              ref={ref}
-            >
-              About Me
-            </motion.h1>
-            <motion.span
-              className={styles.text}
-              variants={spanVariants}
-              initial="initial"
-              ref={ref}
-              animate={isInView && "animate"}
-              // onScroll="visible"
-            >
-              I'm a web developer with strong skills in HTML, CSS, and
-              JavaScript, allowing me to create appealing interfaces. I also
-              have experience in developing web applications using React, Next
-              and Redux/Toolkit on the frontend, and I use Express for the
-              backend along with relational databases like SQL, Prisma and
-              PostgreSQL.
-            </motion.span>
+          <div className={styles.subContainer}>
+            <div className={styles.textContainer}>
+              <motion.h1
+                className={styles.about}
+                variants={h1Variants}
+                initial="initial"
+                animate={isInView && "animate"}
+                ref={ref}
+              >
+                About Me
+              </motion.h1>
+              <motion.span
+                className={styles.text}
+                variants={spanVariants}
+                initial="initial"
+                ref={ref}
+                animate={isInView && "animate"}
+                // onScroll="visible"
+              >
+                I am a web developer with strong skills in HTML, CSS, and
+                JavaScript, enabling me to create appealing interfaces.
+                Furthermore, I have experience in developing web applications
+                using technologies such as React, Next, and Redux/Toolkit. On
+                the server side, I employ Express and relational databases like
+                SQL, Prisma, and PostgreSQL to ensure efficient performance and
+                effective data management.
+              </motion.span>
+            </div>
+            <div className={styles.imageContainer}>
+              <img
+                src={about}
+                alt="si ves esto no cargó la imagen"
+                className={styles.image}
+              />
+            </div>
           </div>
           <div className={styles.stackContainer}>
             <StackSlider />

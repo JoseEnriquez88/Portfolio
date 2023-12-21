@@ -58,7 +58,7 @@
   padding: 20px;
   line-height: 1.5;
   border-radius: 5px;
-  pointer-events: none;
+  /* pointer-events: none; */
   transform: translateY(-96%);
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -66,6 +66,15 @@
 .heading {
   font-size: 32px;
   font-weight: 700;
+}
+
+.content p {
+  font-weight: 700;
+}
+
+.content p:hover {
+  color: #9fd3c7;
+  transition: color 0.3s ease;
 }
 
 .card:hover .content {
@@ -86,12 +95,11 @@
   align-content: center;
   gap: 1em;
 }
-
-.card:hover .icon {
+.icon {
   text-decoration: none;
 }
 
-.card:hover .icon:hover {
+.icon:hover {
   color: #9fd3c7;
-  cursor: pointer;
+  transition: color 0.3s ease;
 }

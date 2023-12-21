@@ -1,9 +1,9 @@
 import styles from "./contact.module.css";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import EmailIcon from "@mui/icons-material/Email";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { Toaster, toast } from "react-hot-toast";
+import contact from "../../assets/SVG/contact.png";
 
 const h1Variants = {
   initial: {
@@ -29,18 +29,14 @@ const h1Variants = {
 };
 
 const containerVariants = {
-  intial: {
-    opacity: 0,
-  },
   animate: {
-    opacity: 1,
     transition: {
       staggerChildren: 0.5,
     },
   },
 };
 
-const slideVariants = {
+const imgVariants = {
   initial: {
     y: 500,
     opacity: 0,
@@ -52,29 +48,76 @@ const slideVariants = {
       duration: 1,
     },
   },
+  floating: {
+    y: [0, 15, 0],
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+      ease: "easeInOut",
+      delay: 1,
+    },
+  },
 };
 
 const Contact = () => {
   const ref = useRef();
   const formRef = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
+  const [formData, setFormData] = useState({
+    name: "",
+    mail: "",
+    message: "",
+  });
 
-  const sendEmail = (event) => {
+  const succesNotify = () => {
+    toast.success("Thanks for communicating. I'll be in touch soon");
+  };
+
+  const errorNotify = () => {
+    toast.error("There was an error. Please try again");
+  };
+
+  const warnNotify = () => {
+    toast.error("Make sure you had complete all fields.");
+  };
+
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (
+      formData.name === "" ||
+      formData.mail === "" ||
+      formData.message === ""
+    ) {
+      warnNotify();
+      return;
+    }
 
     emailjs
       .sendForm(
-        "service_b5at8ue",
-        "template_rliwto9",
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         formRef.current,
-        "vxpkT-TbZOwb3eaHL"
+        import.meta.env.VITE_USER_ID
       )
       .then(
         (result) => {
-          setSuccess(true);
+          setFormData({
+            name: "",
+            mail: "",
+            message: "",
+          });
+          succesNotify();
         },
         (error) => {
-          setError(true);
+          errorNotify();
         }
       );
   };
@@ -93,31 +136,22 @@ const Contact = () => {
               Let's get in touch!
             </motion.h1>
             <motion.div
-              className={styles.itemsContainer}
+              className={styles.imageContainer}
               variants={containerVariants}
               animate={isInView && "animate"}
               ref={ref}
             >
-              <motion.h2 variants={slideVariants}>
-                <EmailIcon className={styles.icon} />
-                Mail
-              </motion.h2>
-              <motion.span variants={slideVariants}>
-                eenriquez.jose@gmail.com
-              </motion.span>
-              <motion.h2 variants={slideVariants}>
-                <WhatsAppIcon className={styles.icon} />
-                Phone
-              </motion.h2>
-              <motion.span variants={slideVariants}>
-                +54 379 4277204
-              </motion.span>
+              <img
+                src={contact}
+                alt="si ves esto no cargó la imagen"
+                className={styles.image}
+              />
             </motion.div>
           </div>
           <div className={styles.formContainer}>
             <motion.form
               ref={formRef}
-              onSubmit={sendEmail}
+              onSubmit={handleSubmit}
               className={styles.form}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -127,24 +161,44 @@ const Contact = () => {
               <input
                 type="text"
                 name="name"
-                required
+                // required
+                value={formData.name}
                 placeholder="Name"
                 className={styles.input}
+                onChange={handleChange}
               />
               <input
-                type="email"
-                name="email"
-                required
-                placeholder="Email"
+                type="mail"
+                name="mail"
+                // required
+                value={formData.mail}
+                placeholder="Mail"
                 className={styles.input}
+                onChange={handleChange}
               />
               <textarea
                 name="message"
                 rows={8}
+                value={formData.message}
                 placeholder="Message"
                 className={styles.textarea}
+                onChange={handleChange}
               />
               <button className={styles.button}>Send</button>
+              <Toaster
+                position="bottom-center"
+                toastOptions={{
+                  className: "",
+                  style: {
+                    border: "2px solid #142d4c",
+                    padding: "10px",
+                    color: "#ececec",
+                    background: "#142d4c",
+                    marginBottom: "50px",
+                  },
+                  duration: 5000,
+                }}
+              />
             </motion.form>
           </div>
         </div>

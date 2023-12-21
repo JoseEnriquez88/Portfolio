@@ -2,7 +2,6 @@ import styles from "./landing.module.css";
 import { motion } from "framer-motion";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 import resume from "../../assets/resume/englishResume.pdf";
-import svg from "../../assets/SVG/landingSVG.png";
 
 const textVariants = {
   initial: {

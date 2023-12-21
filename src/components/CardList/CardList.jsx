@@ -64,7 +64,7 @@ const CardList = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <GitHubIcon />
+                  <GitHubIcon className={styles.icon} />
                 </a>
                 {project.deploy && (
                   <a
@@ -72,7 +72,7 @@ const CardList = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <LanguageIcon />
+                    <LanguageIcon className={styles.icon} />
                   </a>
                 )}
               </div>
