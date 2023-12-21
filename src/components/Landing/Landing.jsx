@@ -1,7 +1,7 @@
 import styles from "./landing.module.css";
 import { motion } from "framer-motion";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
-import resume from "../../assets/resume/englishResume.pdf";
+import resume from "../../assets/resume/JoseCarlosEnriquezDominguezEnglishResume.pdf";
 
 const textVariants = {
   initial: {
