@@ -1,88 +1,155 @@
 import styles from "./navbar.module.css";
-import React, { useState } from "react";
+import { React, useState } from "react";
 import { Link } from "react-scroll";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import logo from "../../assets/logo.png";
 
-const variants = {
-  open: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-  closed: {
-    transition: {
-      staggerChildren: 0.05,
-      staggerDirection: -1,
-    },
-  },
-};
+const navLinks = [
+  { title: "Home", href: "home" },
+  { title: "About", href: "about" },
+  { title: "Projects", href: "projects" },
+  { title: "Contact", href: "contact" },
+];
 
-const itemsVariants = {
+const mobileLinkVars = {
+  initial: {
+    y: "30vh",
+    transition: {
+      duration: 0.5,
+      ease: [0.37, 0, 0.63, 1],
+    },
+  },
   open: {
     y: 0,
-    opacity: 1,
-  },
-  closed: {
-    y: 50,
-    opacity: 0,
+    transition: {
+      ease: [0, 0.55, 0.45, 1],
+      duration: 0.7,
+    },
   },
 };
 
-const NavBar = () => {
-  const [navOpen, setNavOpen] = useState(false);
+const MobileNavLink = ({ title, href }) => {
+  return (
+    <motion.div variants={mobileLinkVars} className={styles.mobileLinks}>
+      <Link to={href}>{title}</Link>
+    </motion.div>
+  );
+};
 
-  const toggleNav = () => {
-    setNavOpen(!navOpen);
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
+
+  const menuVars = {
+    initial: {
+      scaleY: 0,
+    },
+    animate: {
+      scaleY: 1,
+      transition: {
+        duration: 0.5,
+        ease: [0.12, 0, 0.39, 0],
+      },
+    },
+    exit: {
+      scaleY: 0,
+      transition: {
+        delay: 0.5,
+        duration: 0.5,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+  const containerVars = {
+    initial: {
+      transition: {
+        staggerChildren: 0.09,
+        staggerDirection: -1,
+      },
+    },
+    open: {
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.09,
+        staggerDirection: 1,
+      },
+    },
   };
 
   return (
-    <header className={styles.header}>
-      <div className={styles.tooltipContainer}>
-        <Link to="home">
-          <img
-            src={logo}
-            alt="img"
-            className={styles.logo}
-          />
-        {/* <span className={styles.tooltip}>Logo by Danang Mulyo Saputro</span> */}
-        </Link>
-      </div>
-      <i className={styles.menuIcon} onClick={toggleNav}>
-        {navOpen ? <CloseIcon /> : <MenuIcon />}
-      </i>
-      <nav
-        className={`${styles.navbar} ${navOpen ? styles.open : ""}`}
-        // initial={{ opacity: 0, scale: 0.5 }}
-        // animate={{ opacity: 1, scale: 1 }}
-        // transition={{ duration: 0.5 }}
-      >
-        <div className={styles.itemsContainer}>
-          <ul>
-            <li>
-              <Link to="home">Home</Link>
-            </li>
-            <li>
-              <Link to="about">About me</Link>
-            </li>
-            <li>
-              <Link to="projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="contact">Contact</Link>
-            </li>
-            <li>
-              {/* <a href={resume} download="resume.pdf">
-                Descargar CV
-              </a> */}
-            </li>
+    <header>
+      <nav className={styles.navbar}>
+        <img src={logo} alt="" className={styles.logo} />
+        <div>
+          <ul className={styles.itemsContainer}>
+            <Link to="home">
+              <li>Home</li>
+            </Link>
+            <Link to="about">
+              <li>About</li>
+            </Link>
+            <Link to="projects">
+              <li>Projects</li>
+            </Link>
+            <Link to="contact">
+              <li>Contact</li>
+            </Link>
           </ul>
         </div>
+        <i className={styles.iconContainer} onClick={toggleMenu}>
+          <MenuIcon />
+        </i>
       </nav>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            variants={menuVars}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            className={styles.menuContainer}
+          >
+            <div className={styles.menuSubContainer}>
+              <div className={styles.mobileImgContainer}>
+                <img
+                  src={logo}
+                  alt="como tan muchachos"
+                  className={styles.imgMobile}
+                />
+                <i className={styles.iconCloseContainer} onClick={toggleMenu}>
+                  <CloseIcon />
+                </i>
+              </div>
+              <motion.div
+                variants={containerVars}
+                initial="initial"
+                animate="open"
+                exit="initial"
+                className={styles.menuItemContainer}
+              >
+                {navLinks.map((link, index) => {
+                  return (
+                    <div className={styles.links}>
+                      <MobileNavLink
+                        key={index}
+                        title={link.title}
+                        href={link.href}
+                      />
+                    </div>
+                  );
+                })}
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
 
-export default NavBar;
+export default Navbar;

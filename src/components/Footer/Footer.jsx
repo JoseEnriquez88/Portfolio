@@ -6,8 +6,7 @@ import logo from "../../assets/logo.png";
 import discordIcon from "../../assets/icons/discord.png";
 import linkedinIcon from "../../assets/icons/linkedin.png";
 import whatsappIcon from "../../assets/icons/whatsapp.png";
-import emailIcon from "../../assets/icons/gmail.png" 
-
+import emailIcon from "../../assets/icons/gmail.png";
 
 const links = {
   discord: "https://discord.com/channels/954778773654478940",
@@ -22,10 +21,6 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <div className={styles.textContainer}>
-          &copy; {new Date().getFullYear()} Copyright: Jose Enriquez
-          <img src={logo} alt="logo" className={styles.logo} />
-        </div>
         <div className={styles.linksContainer}>
           <a href={links.discord}>
             <img src={discordIcon} alt="logo" className={styles.img} />
@@ -40,9 +35,12 @@ const Footer = () => {
             <img src={whatsappIcon} alt="logo" className={styles.img} />
           </a>
           <a href={links.mail}>
-          <img src={emailIcon} alt="logo" className={styles.img} />
-
+            <img src={emailIcon} alt="logo" className={styles.img} />
           </a>
+        </div>
+        <div className={styles.textContainer}>
+          &copy; {new Date().getFullYear()} Copyright: Jose Enriquez
+          <img src={logo} alt="logo" className={styles.logo} />
         </div>
       </div>
     </footer>

@@ -148,6 +148,26 @@ textarea:focus {
   .container {
     max-width: 100%;
   }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .textContainer {
+    width: 100%;
+  }
+
+  .textContainer h1 {
+    margin-top: 50px;
+    width: 100vw;
+  }
+
+  .formContainer {
+    width: 90%;
+    margin-bottom: 60px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -178,6 +198,22 @@ textarea:focus {
 
   .formContainer {
     margin-bottom: 60px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .textContainer {
+    margin-bottom: 20px;
+  }
+
+  .textContainer h1 {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  .formContainer {
+    margin-bottom: 130px;
     width: 90%;
   }
 }

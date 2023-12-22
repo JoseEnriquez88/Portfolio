@@ -1,10 +1,5 @@
 /* background-color: rgba(0,0,0,.75); */
-
-* {
-  box-sizing: border-box;
-}
-
-.header {
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -16,16 +11,7 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  z-index: 2;
-}
-
-.header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
+  z-index: 1;
 }
 
 .logo {
@@ -39,105 +25,129 @@
   transform: scale(1.1);
 }
 
-.navbar a {
+.itemsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  list-style: none;
   color: #ececec;
-  text-decoration: none;
-  font-size: 20px;
-  margin-left: 35px;
+}
+
+.itemsContainer li {
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-in-out;
 }
 
-.tooltipContainer:not(:hover) .tooltip {
-  visibility: hidden;
-  transform: translateX(-50%) translateY(10px);
-  opacity: 0;
-}
-
-.navbar a:hover {
+.itemsContainer li:hover {
   color: cornflowerblue;
-  transition: color 0.3s ease;
 }
 
-.itemsContainer ul {
+.iconContainer {
+  display: none;
+}
+
+.mobileLinks {
   display: flex;
   justify-content: center;
-  align-content: center;
-  list-style: none;
+  align-items: center;
+  margin-top: 100px;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #ececec;
+  cursor: pointer;
 }
 
-.menuIcon {
-  font-size: 36px;
-  color: #ececec;
-  display: none;
-  transition: color 0.3s ease;
-  cursor: pointer;
+.menuSubContainer {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.mobileImgContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links {
+  overflow: hidden;
 }
 
 @media (max-width: 800px) {
-  .header {
-    padding: 1.25rem 4%;
+  .itemsContainer {
+    display: none;
+  }
+
+  .imgMobile {
+    height: 80px;
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 8px;
+  }
+
+  .logo {
+    margin-left: -70px;
+  }
+
+  .iconContainer {
+    display: block;
+    color: #ececec;
+    cursor: pointer;
+    margin-right: -70px;
+  }
+
+  .iconCloseContainer {
+    margin: 35px 34px 0 0;
+    color: #ececec;
+    cursor: pointer;
+  }
+
+  .menuContainer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transform-origin: top;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    color: #ececec;
+    padding: 10px;
+    z-index: 2;
   }
 }
 
 @media (max-width: 600px) {
-  .menuIcon {
-    display: block;
-  }
-
-  .header {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
-
-  .navbar {
-    position: fixed;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    padding: 0.5rem 4%;
-    background: rgba(255, 255, 255, 0.1);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+  .itemsContainer {
     display: none;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
   }
 
-  .itemsContainer ul {
+  .logo {
+    margin-left: -70px;
+  }
+
+  .menuContainer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transform-origin: top;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #ececec;
+    padding: 10px;
+    z-index: 2;
+  }
+
+  .menuItemsContainer {
     display: flex;
+    flex-direction: column;
+    height: 100%;
     justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    list-style: none;
-  }
-
-  .closeIcon:hover,
-  .menuIcon:hover {
-    color: cornflowerblue;
-    transition: color 0.3s ease;
-  }
-
-  .open {
-    display: block;
-    transform: translateY(0%);
-    transition: transform 0.3s ease;
-    display: flex;
     align-items: center;
-    flex-direction: column;
-  }
-
-  .itemsContainer a {
-    display: block;
-    margin: 1.5rem;
-    margin-top: 50px;
-    font-weight: 600;
-    font-size: uppercase;
+    gap: 4px;
   }
 }
