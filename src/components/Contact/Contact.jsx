@@ -203,7 +203,7 @@ const Contact = () => {
               />
               <button className={styles.button}>Send</button>
               <Toaster
-                position="bottom-center"
+                position="top-center"
                 toastOptions={{
                   className: "",
                   style: {
@@ -211,7 +211,7 @@ const Contact = () => {
                     padding: "10px",
                     color: "#ececec",
                     background: "#142d4c",
-                    marginBottom: "50px",
+                    marginTop: "50px",
                   },
                   duration: 5000,
                 }}
