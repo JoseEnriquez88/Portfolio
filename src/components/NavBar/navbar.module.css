@@ -32,6 +32,7 @@
   gap: 4rem;
   list-style: none;
   color: #ececec;
+  font-weight: bold;
 }
 
 .itemsContainer li {

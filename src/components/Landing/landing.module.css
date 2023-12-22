@@ -47,6 +47,10 @@
   background-color: #142d4c;
 }
 
+.icon {
+  transform: translate(-10%, 20%);
+}
+
 .iconContainer {
   color: #ececec;
   margin-left: 170px;

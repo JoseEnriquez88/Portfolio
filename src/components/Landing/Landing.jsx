@@ -27,7 +27,6 @@ const textVariants = {
   },
 };
 
-
 const sliderVariants = {
   initial: {
     x: 0,
@@ -58,10 +57,14 @@ const Landing = () => {
           <motion.h2 variants={textVariants}>Full Stack Developer</motion.h2>
           <button className={styles.button}>
             <a href={resume} download="englishResume.pdf">
-              <CloudDownloadIcon /> Resume
+              <CloudDownloadIcon className={styles.icon} /> Resume
             </a>
           </button>
-          <motion.div className={styles.iconContainer} variants={textVariants} animate="scrollButton">
+          <motion.div
+            className={styles.iconContainer}
+            variants={textVariants}
+            animate="scrollButton"
+          >
             <SouthIcon />
           </motion.div>
         </motion.div>

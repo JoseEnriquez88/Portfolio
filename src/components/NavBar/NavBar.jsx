@@ -30,10 +30,18 @@ const mobileLinkVars = {
   },
 };
 
-const MobileNavLink = ({ title, href }) => {
+const MobileNavLink = ({ title, href, onClick }) => {
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    }
+  };
+
   return (
     <motion.div variants={mobileLinkVars} className={styles.mobileLinks}>
-      <Link to={href}>{title}</Link>
+      <Link to={href} onClick={handleClick}>
+        {title}
+      </Link>
     </motion.div>
   );
 };
@@ -43,6 +51,10 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
+  };
+
+  const closeMenu = () => {
+    setOpen(false);
   };
 
   const menuVars = {
@@ -88,16 +100,16 @@ const Navbar = () => {
         <div>
           <ul className={styles.itemsContainer}>
             <Link to="home">
-              <li>Home</li>
+              <li>HOME</li>
             </Link>
             <Link to="about">
-              <li>About</li>
+              <li>ABOUT</li>
             </Link>
             <Link to="projects">
-              <li>Projects</li>
+              <li>PROJECTS</li>
             </Link>
             <Link to="contact">
-              <li>Contact</li>
+              <li>CONTACT</li>
             </Link>
           </ul>
         </div>
@@ -139,6 +151,7 @@ const Navbar = () => {
                         key={index}
                         title={link.title}
                         href={link.href}
+                        onClick={closeMenu}
                       />
                     </div>
                   );
