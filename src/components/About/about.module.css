@@ -61,7 +61,7 @@
 .image {
   width: 350px;
   z-index: 2;
-  margin: 0 auto;
+  margin-left: 200px;
   margin-top: 50px;
   animation-name: floating;
   animation-duration: 3s;
@@ -103,6 +103,10 @@
     font-size: 20px;
     text-align: center;
   }
+}
+
+.stackContainer{
+  width: 100%;
 }
 
 @media (max-width: 800px) {
