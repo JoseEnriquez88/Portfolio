@@ -1,6 +1,7 @@
 import styles from "./landing.module.css";
 import { motion } from "framer-motion";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
+import SouthIcon from "@mui/icons-material/South";
 import resume from "../../assets/resume/JoseCarlosEnriquezDominguezEnglishResume.pdf";
 
 const textVariants = {
@@ -18,13 +19,14 @@ const textVariants = {
   },
   scrollButton: {
     opacity: 0,
-    y: 10,
+    y: 50,
     transition: {
       duration: 2,
       repeat: Infinity,
     },
   },
 };
+
 
 const sliderVariants = {
   initial: {
@@ -59,6 +61,9 @@ const Landing = () => {
               <CloudDownloadIcon /> Resume
             </a>
           </button>
+          <motion.div className={styles.iconContainer} variants={textVariants} animate="scrollButton">
+            <SouthIcon />
+          </motion.div>
         </motion.div>
       </div>
     </div>

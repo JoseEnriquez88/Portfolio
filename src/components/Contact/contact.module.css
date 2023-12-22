@@ -138,3 +138,47 @@ textarea:focus {
   /* border: 1px solid cornflowerblue; */
   background-color: #142d4c;
 }
+
+@media (max-width: 800px) {
+  .imageContainer {
+    display: none;
+  }
+
+  .wrapper,
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .imageContainer {
+    display: none;
+  }
+
+  .wrapper,
+  .container {
+    max-width: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .textContainer {
+    height: 50px;
+    width: 100vw;
+    margin-top: 60px;
+  }
+
+  .textContainer h1 {
+    font-size: 60px;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+
+  .formContainer {
+    margin-bottom: 60px;
+    width: 90%;
+  }
+}

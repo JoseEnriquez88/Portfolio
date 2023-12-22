@@ -1,5 +1,5 @@
 import styles from "./contact.module.css";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "react-hot-toast";
@@ -62,13 +62,32 @@ const imgVariants = {
 
 const Contact = () => {
   const ref = useRef();
+  const h1Ref = useRef();
   const formRef = useRef();
-  const isInView = useInView(ref, { margin: "-100px" });
+  const [h1InView, setH1InView] = useState(false);
+  const isInView = useInView(ref, { threshold: 0.5 });
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const h1Element = h1Ref.current;
+
+      if (h1Element) {
+        const h1Rect = h1Element.getBoundingClientRect();
+
+        setH1InView(h1Rect.top < window.innerHeight);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const succesNotify = () => {
     toast.success("Thanks for communicating. I'll be in touch soon");
@@ -131,15 +150,15 @@ const Contact = () => {
             <motion.h1
               variants={h1Variants}
               initial="initial"
-              animate={isInView && "animate"}
-              ref={ref}
+              animate={h1InView ? "animate" : undefined}
+              ref={h1Ref}
             >
               Let's get in touch!
             </motion.h1>
             <motion.div
               className={styles.imageContainer}
               variants={containerVariants}
-              animate={isInView && "animate"}
+              animate={isInView ? "animate" : undefined}
               ref={ref}
             >
               <img
@@ -156,13 +175,11 @@ const Contact = () => {
               className={styles.form}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              // transition={{ delay: 1, duration: 1 }}
               transition={{ duration: 4 }}
             >
               <input
                 type="text"
                 name="name"
-                // required
                 value={formData.name}
                 placeholder="Name"
                 className={styles.input}
@@ -171,7 +188,6 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
-                // required
                 value={formData.email}
                 placeholder="Email"
                 className={styles.input}

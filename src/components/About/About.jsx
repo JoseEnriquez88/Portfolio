@@ -1,6 +1,6 @@
 import styles from "./about.module.css";
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import StackSlider from "../StackSlider/StackSlider";
 import about from "../../assets/SVG/about.png";
 
@@ -51,8 +51,31 @@ const spanVariants = {
 };
 
 const About = () => {
-  const ref = useRef();
-  const isInView = useInView(ref, { margin: "-100px" });
+  const [isInView, setIsInView] = useState(false);
+  const h1Ref = useRef();
+  const pRef = useRef();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const h1Element = h1Ref.current;
+      const pElement = pRef.current;
+
+      if (h1Element && pElement) {
+        const h1Rect = h1Element.getBoundingClientRect();
+        const pRect = pElement.getBoundingClientRect();
+
+        setIsInView(
+          h1Rect.top < window.innerHeight && pRect.top < window.innerHeight
+        );
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -65,7 +88,7 @@ const About = () => {
                 variants={h1Variants}
                 initial="initial"
                 animate={isInView && "animate"}
-                ref={ref}
+                ref={h1Ref}
               >
                 About Me
               </motion.h1>
@@ -74,7 +97,7 @@ const About = () => {
                   className={styles.text}
                   variants={spanVariants}
                   initial="initial"
-                  ref={ref}
+                  ref={pRef}
                   animate={isInView && "animate"}
                 >
                   I am a web developer with strong skills in HTML, CSS, and
