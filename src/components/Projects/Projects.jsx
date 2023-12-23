@@ -3,7 +3,6 @@ import CardList from "../CardList/CardList";
 import Carousel from "../Carousel/Carousel";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Card } from "@mui/material";
 
 const h1Variants = {
   initial: {

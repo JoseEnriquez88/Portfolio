@@ -96,20 +96,22 @@ const Navbar = () => {
   return (
     <header>
       <nav className={styles.navbar}>
-        <img src={logo} alt="" className={styles.logo} />
+        <Link to="home">
+          <img src={logo} alt="" className={styles.logo} />
+        </Link>
         <div>
           <ul className={styles.itemsContainer}>
             <Link to="home">
-              <li>HOME</li>
+              <li>Home</li>
             </Link>
             <Link to="about">
-              <li>ABOUT</li>
+              <li>About</li>
             </Link>
             <Link to="projects">
-              <li>PROJECTS</li>
+              <li>Projects</li>
             </Link>
             <Link to="contact">
-              <li>CONTACT</li>
+              <li>Contact</li>
             </Link>
           </ul>
         </div>
