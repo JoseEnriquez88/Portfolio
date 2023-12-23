@@ -1,7 +1,9 @@
 import styles from "./projects.module.css";
 import CardList from "../CardList/CardList";
+import Carousel from "../Carousel/Carousel";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Card } from "@mui/material";
 
 const h1Variants = {
   initial: {
@@ -29,6 +31,7 @@ const h1Variants = {
 const Projects = () => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
+  const isMobile = window.innerWidth <= 850;
 
   return (
     <div className={styles.container}>
@@ -45,7 +48,9 @@ const Projects = () => {
               Projects
             </motion.h1>
             <div className={styles.cardsContainer}>
-              <CardList />
+              {isMobile ? <Carousel /> : <CardList />}
+              {/* <Carousel /> */}
+              {/* <CardList /> */}
             </div>
           </div>
         </div>
