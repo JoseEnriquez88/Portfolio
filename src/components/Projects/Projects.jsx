@@ -1,4 +1,5 @@
 import styles from "./projects.module.css";
+import { useEffect, useState } from "react";
 import CardList from "../CardList/CardList";
 import Carousel from "../Carousel/Carousel";
 import { motion, useInView } from "framer-motion";
@@ -29,8 +30,30 @@ const h1Variants = {
 
 const Projects = () => {
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-100px" });
+  const h1Ref = useRef();
+  const [h1InView, setH1InView] = useState(false);
   const isMobile = window.innerWidth <= 850;
+
+  const handleScroll = () => {
+    const h1Element = h1Ref.current;
+
+    if (h1Element) {
+      const h1Rect = h1Element.getBoundingClientRect();
+
+      setH1InView(h1Rect.top < window.innerHeight);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    handleScroll();
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -41,16 +64,14 @@ const Projects = () => {
               className={styles.title}
               variants={h1Variants}
               initial="initial"
-              animate={isInView && "animate"}
-              ref={ref}
+              animate={h1InView ? "animate" : undefined}
+              ref={h1Ref}
             >
               Projects
             </motion.h1>
-            <div className={styles.cardsContainer}>
-              {isMobile ? <Carousel /> : <CardList />}
-              {/* <Carousel /> */}
-              {/* <CardList /> */}
-            </div>
+          </div>
+          <div className={styles.cardsContainer}>
+            {isMobile ? <Carousel /> : <CardList />}
           </div>
         </div>
       </div>

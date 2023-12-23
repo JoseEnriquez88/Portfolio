@@ -105,7 +105,7 @@
   }
 }
 
-.stackContainer{
+.stackContainer {
   width: 100%;
 }
 
@@ -125,8 +125,8 @@
   }
 
   .bioContainer {
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .about {
@@ -135,11 +135,11 @@
 
   .text {
     font-size: 20px;
-    text-align: center;
+    text-align: justify;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .imageContainer {
     display: none;
   }
@@ -152,11 +152,14 @@
   .textContainer,
   .bioContainer {
     width: 100vw;
+    margin-top: 20px;
   }
 
   .bioContainer {
     padding-left: 10px;
     padding-right: 10px;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .about {
@@ -167,6 +170,10 @@
 
   .text {
     font-size: 20px;
-    text-align: center;
+    text-align: justify;
+  }
+
+  .stackContainer {
+    margin-top: -60px;
   }
 }
