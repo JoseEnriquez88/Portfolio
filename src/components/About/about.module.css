@@ -177,3 +177,21 @@
     margin-top: -60px;
   }
 }
+
+@media (max-width: 300px) {
+  .textContainer {
+  }
+
+  .bioContainer {
+    width: 95%;
+  }
+
+  .about {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+}

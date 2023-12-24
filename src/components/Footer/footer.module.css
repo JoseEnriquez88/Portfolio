@@ -97,3 +97,11 @@
     margin-top: -5px;
   }
 }
+
+@media (max-width: 365px) {
+  .textContainer {
+    margin-top: 8px;
+    font-size: 12px;
+
+  }
+}

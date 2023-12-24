@@ -69,3 +69,10 @@
     margin-bottom: 250px;
   }
 }
+
+@media (max-width: 300px) {
+  .title{
+    text-align: center;
+    font-size: 50px;
+  }
+}

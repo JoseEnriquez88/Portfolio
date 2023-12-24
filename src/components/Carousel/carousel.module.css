@@ -110,7 +110,6 @@
   }
 
   .img {
-    
     object-fit: cover;
   }
 }
@@ -124,5 +123,11 @@
     width: 512px;
     height: 300px;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 300px) {
+  .container {
+    width: 75%;
   }
 }

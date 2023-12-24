@@ -96,3 +96,14 @@
     margin: 0 auto;
   }
 }
+
+@media (max-width: 300px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .name {
+    font-size: 50px;
+    text-align: center;
+  }
+}
