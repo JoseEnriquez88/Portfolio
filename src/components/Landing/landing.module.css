@@ -97,6 +97,17 @@
   }
 }
 
+@media (max-width: 375px) {
+  .name{
+    font-size: 43px;
+  }
+
+  .textContainer h2{
+    font-size: 30px;
+  }
+}
+
+
 @media (max-width: 300px) {
   .wrapper {
     width: 100%;
@@ -107,3 +118,5 @@
     text-align: center;
   }
 }
+
+

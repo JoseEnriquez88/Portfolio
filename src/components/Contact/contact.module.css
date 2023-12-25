@@ -219,7 +219,17 @@ textarea:focus {
 }
 
 @media (max-width: 400px) {
-  .textContainer h1{
+  .textContainer h1 {
     font-size: 40px;
+  }
+}
+
+@media (max-width: 375px) {
+  .textContainer h1 {
+    margin-bottom: -200px;
+  }
+
+  .formContainer {
+    margin-top: 110px;
   }
 }

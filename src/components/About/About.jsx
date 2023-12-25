@@ -100,7 +100,7 @@ const About = () => {
                   ref={pRef}
                   animate={isInView && "animate"}
                 >
-                  I am a web developer with strong skills in HTML, CSS, and
+                  I'm a web developer with strong skills in HTML, CSS, and
                   JavaScript, enabling me to create appealing interfaces.
                   Furthermore, I have experience in developing web applications
                   using technologies such as React, Next, and Redux/Toolkit. On

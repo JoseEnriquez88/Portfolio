@@ -126,6 +126,12 @@
   }
 }
 
+@media (max-width: 375px) {
+  .mobileLinks{
+    margin-top: 80px;
+  }
+}
+
 @media (max-width: 600px) {
   .itemsContainer {
     display: none;

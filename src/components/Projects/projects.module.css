@@ -70,6 +70,17 @@
   }
 }
 
+@media (max-width: 375px) {
+  .textContainer{
+    margin-top: 200px;
+  }
+
+  .title{
+    font-size: 50px;
+  }
+}
+
+
 @media (max-width: 300px) {
   .title{
     text-align: center;

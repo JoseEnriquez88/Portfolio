@@ -98,10 +98,16 @@
   }
 }
 
+@media (max-width: 375px) {
+  .linksContainer {
+    /* margin-bottom: 20px; */
+    margin-top: -20px;
+  }
+}
+
 @media (max-width: 365px) {
   .textContainer {
     margin-top: 8px;
     font-size: 12px;
-
   }
 }
