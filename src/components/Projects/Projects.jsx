@@ -32,7 +32,7 @@ const Projects = () => {
   const ref = useRef();
   const h1Ref = useRef();
   const [h1InView, setH1InView] = useState(false);
-  const isMobile = window.innerWidth <= 850;
+  const isMobile = window.innerWidth <= 1600;
 
   const handleScroll = () => {
     const h1Element = h1Ref.current;

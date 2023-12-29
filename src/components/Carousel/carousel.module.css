@@ -131,3 +131,10 @@
     width: 75%;
   }
 }
+
+@media (max-width: 1600px) {
+  .img {
+    width: 100%;
+  }
+
+}
