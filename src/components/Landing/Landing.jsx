@@ -6,7 +6,7 @@ import resume from "../../assets/resume/JoseCarlosEnriquezDominguezEnglishResume
 
 const textVariants = {
   initial: {
-    x: -500,
+    x: -50,
     opacity: 0,
   },
   animate: {

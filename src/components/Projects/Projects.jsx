@@ -7,7 +7,7 @@ import { useRef } from "react";
 
 const h1Variants = {
   initial: {
-    x: -500,
+    x: -100,
     opacity: 0,
   },
   animate: {

@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer";
 
 const h1Variants = {
   initial: {
-    x: -500,
+    x: -60,
     opacity: 0,
   },
   animate: {

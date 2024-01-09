@@ -6,7 +6,7 @@ import about from "../../assets/SVG/about.png";
 
 const h1Variants = {
   initial: {
-    x: -500,
+    x: -60,
     opacity: 0,
   },
   animate: {
@@ -29,7 +29,7 @@ const h1Variants = {
 
 const spanVariants = {
   initial: {
-    x: 1000,
+    x: 20,
     opacity: 0,
   },
   animate: {

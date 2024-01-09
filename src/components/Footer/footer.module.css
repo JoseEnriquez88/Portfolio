@@ -22,7 +22,7 @@
 
 .linksContainer {
   display: flex;
-  margin-left: auto;
+  margin: 0 auto;
   gap: 1rem;
 }
 

@@ -11,7 +11,6 @@ function App() {
       <section id="home">
         <NavBar />
         <Landing />
-        {/* <Hero /> */}
       </section>
       <section id="about">
         <About />
@@ -21,7 +20,6 @@ function App() {
       </section>
       <section id="contact">
         <Contact />
-        {/* <Footer /> */}
       </section>
     </div>
   );

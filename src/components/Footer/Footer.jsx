@@ -39,7 +39,7 @@ const Footer = () => {
           </a>
         </div>
         <div className={styles.textContainer}>
-          &copy; {new Date().getFullYear()} Copyright: Jose Enriquez
+          &copy; {new Date().getFullYear()}: Jose Enriquez
           <img src={logo} alt="logo" className={styles.logo} />
         </div>
       </div>
