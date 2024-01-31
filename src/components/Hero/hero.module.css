@@ -1,0 +1,85 @@
+/* @font-face {
+  font-family: "Aircruiser";
+  src: url("/fonts/aircruiser/aircruiser.ttf") format("truetype");
+} */
+
+@font-face {
+  font-family: "Prototype";
+  src: url("/fonts/Prototype.ttf") format("truetype");
+}
+
+.container {
+  height: calc(100vh);
+  overflow: hidden;
+  position: relative;
+}
+
+.wrapper {
+  max-width: 80%;
+  height: 100%;
+  margin: auto;
+  margin-top: 150px;
+  background-color: red;
+}
+
+.dataContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 2rem;
+  width: 800px;
+  height: 400px;
+}
+
+.name {
+  font-size: 88px;
+  font-family: Prototype, sans-serif;
+  letter-spacing: 10px;
+  /* color: rgb(11, 196, 112); */
+  background: linear-gradient(
+    to right,
+    #078343,
+    #11a759,
+    /* #8bf4be, */ /* #5ee9a1, */ /* #bffbdc, */ #3bd988,
+    #22c470,
+    #02592c
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.dataContainer h2 {
+  font-size: 50px;
+  font-family: Prototype, sans-serif;
+  z-index: 2;
+}
+
+.button {
+  font-family: Prototype, sans-serif;
+  font-weight: 500;
+  color: #ececec;
+  width: 200px;
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid rgb(150, 159, 155);
+  /* background: #1a1c1b; */
+  background: transparent;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #000;
+  background-color: rgb(34, 196, 112);
+}
+
+.icon {
+  transform: translate(-10%, 20%);
+  z-index: 1;
+}
+
+.icon:hover {
+  color: #000;
+}

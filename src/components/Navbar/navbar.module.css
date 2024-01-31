@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Prototype";
+  src: url("/fonts/Prototype.ttf") format("truetype");
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: rgba(255, 255, 255, 0.1); */
+  /* backdrop-filter: blur(10px); */
+  /* -webkit-backdrop-filter: blur(10px); */
+  z-index: 1;
+  font-family: Prototype, sans-serif;
+}
+
+.logo {
+  height: 80px;
+  width: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.itemsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  list-style: none;
+  color: #ececec;
+  font-weight: bold;
+}
+
+.itemsContainer li {
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.itemsContainer li:hover {
+  /* color: rgb(34, 196, 112); */
+  /* color: #00be5c; */
+  color: rgb(0, 190, 92);
+}
+
+.iconContainer {
+  display: none;
+}
