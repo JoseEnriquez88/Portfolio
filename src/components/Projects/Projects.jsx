@@ -1,7 +1,13 @@
+"use client";
+import styles from "./projects.module.css";
+
 const Projects = () => {
   return (
-    <div>
-      <h1>Projects</h1>
+    <div className={styles.container}>
+      <dv className={styles.wrapper}>
+        <h1 className={styles.title}>Projects</h1>
+        <div className={styles.projectContainer}></div>
+      </dv>
     </div>
   );
 };

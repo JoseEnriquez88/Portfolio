@@ -1,8 +1,3 @@
-/* @font-face {
-  font-family: "Aircruiser";
-  src: url("/fonts/aircruiser/aircruiser.ttf") format("truetype");
-} */
-
 @font-face {
   font-family: "Prototype";
   src: url("/fonts/Prototype.ttf") format("truetype");
@@ -16,10 +11,8 @@
 
 .wrapper {
   max-width: 80%;
-  height: 100%;
   margin: auto;
   margin-top: 150px;
-  background-color: red;
 }
 
 .dataContainer {
@@ -36,8 +29,7 @@
 .name {
   font-size: 88px;
   font-family: Prototype, sans-serif;
-  letter-spacing: 10px;
-  /* color: rgb(11, 196, 112); */
+  letter-spacing: 2px;
   background: linear-gradient(
     to right,
     #078343,
@@ -82,4 +74,9 @@
 
 .icon:hover {
   color: #000;
+}
+
+.wavesContainer {
+  margin-top: 50px;
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }

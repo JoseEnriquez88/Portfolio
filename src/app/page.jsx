@@ -12,7 +12,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Hero id="home" />
-      {/* <Projects id="projects" /> */}
+      <Projects id="projects" />
       {/* <About id="about" /> */}
       {/* <Contact id="contact" /> */}
       {/* <Footer /> */}
