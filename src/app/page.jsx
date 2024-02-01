@@ -10,11 +10,20 @@ import NavbarBottom from "@/components/NavBarBottom/NavbarBottom";
 export default function Home() {
   return (
     <div>
-      <Navbar />
-      <Hero id="home" />
-      <Projects id="projects" />
-      {/* <About id="about" /> */}
-      {/* <Contact id="contact" /> */}
+      <section id="home">
+        <Navbar />
+        <Hero id="home" />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="Contact">
+        <Contact />
+      </section>
+
       {/* <Footer /> */}
     </div>
   );

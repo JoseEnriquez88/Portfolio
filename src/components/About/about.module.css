@@ -1,0 +1,26 @@
+.container {
+  overflow: hidden;
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  height: 100%;
+  margin: auto;
+  color: #ececec;
+}
+
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  margin-top: 100px;
+  border-radius: 5px;
+  gap: 5rem;
+}

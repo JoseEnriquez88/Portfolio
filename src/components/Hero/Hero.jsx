@@ -42,7 +42,8 @@ const Hero = () => {
               href="/resume/JoseCarlosEnriquezDominguezEnglishResume.pdf"
               download="englishResume.pdf"
             >
-              <CloudDownloadIcon className={styles.icon} /> Resume
+              <CloudDownloadIcon className={styles.icon} />
+              Resume
             </a>
           </button>
         </div>

@@ -4,13 +4,25 @@
 }
 
 .container {
-  height: calc(100vh);
+  /* height: calc(100vh); */
   overflow: hidden;
   position: relative;
-  background: #000;
 }
 
-.projectContainer {
+.wrapper {
+  max-width: 80%;
+  margin: auto;
+  margin-top: 120px;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  width: 100%;
+  gap: 2rem;
 }
 
 .title {
@@ -19,4 +31,16 @@
   white-space: nowrap;
   letter-spacing: 2px;
   color: rgb(34, 196, 112);
+}
+
+.textContainer h2 {
+  font-family: Prototype, sans-serif;
+  font-size: 30px;
+}
+
+.projectContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
 }

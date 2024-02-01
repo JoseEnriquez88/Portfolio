@@ -6,7 +6,7 @@
       "type": "E-commerce",
       "repo": "https://github.com/JoseEnriquez88/GLAMIFY",
       "deploy": null,
-      "image": "/landingGlamify.jpeg"
+      "image": "/projects/landingGlamify.png"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "type": "POS",
       "repo": "https://github.com/JoseEnriquez88/Agilix",
       "deploy": null,
-      "image": "/loginAgilix.jpeg"
+      "image": "/projects/loginAgilix.jpeg"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "type": "Pokedex",
       "repo": "https://github.com/JoseEnriquez88/Pokemon",
       "deploy": "https://pokemon-jose-enriquez-88.vercel.app/",
-      "image": "/homePoke.png"
+      "image": "/projects/landingPoke.png"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "type": "Interactive R&M",
       "repo": "https://github.com/JoseEnriquez88/Rick_And_Morty",
       "deploy": null,
-      "image": "/homeRAM.png"
+      "image": "/projects/homeRick.png"
     }
   ]
 }

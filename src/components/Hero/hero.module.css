@@ -58,18 +58,20 @@
   border: 1px solid rgb(150, 159, 155);
   /* background: #1a1c1b; */
   background: transparent;
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    border 0.3s ease-in-out;
   cursor: pointer;
 }
 
 .button:hover {
   color: #000;
+  border: 1px solid rgb(34, 196, 112);
   background-color: rgb(34, 196, 112);
 }
 
 .icon {
   transform: translate(-10%, 20%);
-  z-index: 1;
+  cursor: pointer;
 }
 
 .icon:hover {

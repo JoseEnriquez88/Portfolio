@@ -1,3 +1,4 @@
+"use client";
 import styles from "./navbar.module.css";
 import { Link } from "react-scroll";
 
@@ -5,7 +6,7 @@ const Navbar = () => {
   return (
     <header>
       <nav className={styles.navbar}>
-        <Link href="home">
+        <Link to="home">
           <img src="/logo.png" alt="logo" className={styles.logo} />
         </Link>
         <div>
