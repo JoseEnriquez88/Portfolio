@@ -1,6 +1,7 @@
 "use client";
 import styles from "./navbar.module.css";
 import { Link } from "react-scroll";
+import NavLinks from "../NavLinks/NavLinks";
 
 const Navbar = () => {
   return (
@@ -9,8 +10,9 @@ const Navbar = () => {
         <Link to="home">
           <img src="/logo.png" alt="logo" className={styles.logo} />
         </Link>
-        <div>
-          <ul className={styles.itemsContainer}>
+        <div className={styles.itemsContainer}>
+          <NavLinks />
+          {/* <ul className={styles.itemsContainer}>
             <Link to="home">
               <li>Home</li>
             </Link>
@@ -23,7 +25,7 @@ const Navbar = () => {
             <Link to="contact">
               <li>Contact</li>
             </Link>
-          </ul>
+          </ul> */}
         </div>
       </nav>
     </header>

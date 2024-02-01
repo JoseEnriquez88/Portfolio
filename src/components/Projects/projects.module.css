@@ -30,7 +30,9 @@
   font-family: Prototype, sans-serif;
   white-space: nowrap;
   letter-spacing: 2px;
-  color: rgb(34, 196, 112);
+  background: linear-gradient(to right, #078343, #22c470, #02592c);
+  background-clip: text;
+  color: transparent;
 }
 
 .textContainer h2 {
