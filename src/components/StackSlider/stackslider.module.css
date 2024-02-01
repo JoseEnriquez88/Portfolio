@@ -1,0 +1,25 @@
+@keyframes slide {
+  to{
+    transform: translate(calc(-101vw - .5rem));
+}
+}
+
+.slider {
+  overflow: hidden;
+  padding: 60px 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.slide {
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  animation: 35s slide infinite linear;
+}
+
+.img {
+  height: 100px;
+  margin: 0 20px;
+  filter: brightness(70%);
+}

@@ -46,3 +46,8 @@
   font-size: 20px;
   width: 100%;
 }
+
+.stackContainer {
+  width: 70vw;
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}

@@ -1,5 +1,5 @@
 import styles from "./about.module.css";
-// import StackSlider from "../StackSlider/StackSlider";
+import StackSlider from "../StackSlider/StackSlider";
 
 const About = () => {
   return (
@@ -25,9 +25,9 @@ const About = () => {
               {/* <img src={about} alt="image" className={styles.image} /> */}
             </div>
           </div>
-          {/* <div className={styles.stackContainer}>
+          <div className={styles.stackContainer}>
             <StackSlider />
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
