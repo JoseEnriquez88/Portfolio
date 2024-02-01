@@ -37,15 +37,16 @@ const Hero = () => {
             </span>{" "}
             developer
           </h2>
-          <button className={styles.button}>
-            <a
-              href="/resume/JoseCarlosEnriquezDominguezEnglishResume.pdf"
-              download="englishResume.pdf"
-            >
-              <CloudDownloadIcon className={styles.icon} />
-              Resume
-            </a>
-          </button>
+          <a
+            href="/resume/JoseCarlosEnriquezDominguezEnglishResume.pdf"
+            download="englishResume.pdf"
+            className={styles.button}
+          >
+            <span className={styles.icon}>
+              <CloudDownloadIcon />
+            </span>
+            Resume
+          </a>
         </div>
       </div>
       <div className={styles.wavesContainer}>

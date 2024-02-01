@@ -48,30 +48,31 @@
   z-index: 2;
 }
 
-.button {
+a.button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
   font-family: Prototype, sans-serif;
   font-weight: 500;
   color: #ececec;
   width: 200px;
-  padding: 10px;
-  border-radius: 30px;
+  padding: 15px;
+  border-radius: 20px;
   border: 1px solid rgb(150, 159, 155);
-  /* background: #1a1c1b; */
   background: transparent;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
     border 0.3s ease-in-out;
   cursor: pointer;
 }
 
-.button:hover {
+a.button:hover {
   color: #000;
   border: 1px solid rgb(34, 196, 112);
   background-color: rgb(34, 196, 112);
 }
 
 .icon {
-  transform: translate(-10%, 20%);
-  cursor: pointer;
+  transform: translate(-40%, -20%);
 }
 
 .icon:hover {

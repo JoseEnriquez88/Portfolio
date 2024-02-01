@@ -1,7 +1,7 @@
 import styles from "./cards.module.css";
 import projects from "@/utils/projects.json";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import LanguageIcon from "@mui/icons-material/Language";
+import LinkIcon from "@mui/icons-material/Link";
 
 const Cards = () => {
   return (
@@ -14,7 +14,10 @@ const Cards = () => {
             </div>
             <div className={styles.content}>
               <p className={styles.heading}>{project.name}</p>
-              <p>{project.type}</p>
+              <p className={styles.type}>{project.type}</p>
+              <article className={styles.article}>
+                {project.description}
+              </article>
               <div className={styles.iconContainer}>
                 <a
                   href={project.repo}
@@ -31,7 +34,7 @@ const Cards = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <LanguageIcon className={styles.icon} />
+                    <LinkIcon className={styles.icon} />
                   </a>
                 )}
               </div>

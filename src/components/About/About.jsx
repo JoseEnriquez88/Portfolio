@@ -10,7 +10,7 @@ const About = () => {
             <div className={styles.textContainer}>
               <h1 className={styles.about}>About Me</h1>
               <div className={styles.bioContainer}>
-                <p className={styles.text}>
+                <artilce className={styles.text}>
                   I'm a web developer with strong skills in HTML, CSS, and
                   JavaScript, enabling me to create appealing interfaces.
                   Furthermore, I have experience in developing web applications
@@ -18,7 +18,7 @@ const About = () => {
                   the server side, I employ Express and relational databases
                   like SQL, Prisma, and PostgreSQL to ensure efficient
                   performance and effective data management.
-                </p>
+                </artilce>
               </div>
             </div>
             <div className={styles.imageContainer}>

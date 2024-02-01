@@ -6,7 +6,8 @@
       "type": "E-commerce",
       "repo": "https://github.com/JoseEnriquez88/GLAMIFY",
       "deploy": null,
-      "image": "/projects/landingGlamify.png"
+      "image": "/projects/landingGlamify.png",
+      "description": "An online commerce platform, developed in a group setting, that streamlines the purchase, sale, ordering, and payment of clothing and accessories in an agile, convenient manner, with an innovative design."
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "type": "POS",
       "repo": "https://github.com/JoseEnriquez88/Agilix",
       "deploy": null,
-      "image": "/projects/loginAgilix.jpeg"
+      "image": "/projects/loginAgilix.jpeg",
+      "description": "This app is a point-of-sale system that allows users to manage accounting, record purchases, create products for sale, and improve overall business management. On this project, I collaborated with a team of four people and we applied agile methodologies such as SCRUM."
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "type": "Pokedex",
       "repo": "https://github.com/JoseEnriquez88/Pokemon",
       "deploy": "https://pokemon-jose-enriquez-88.vercel.app/",
-      "image": "/projects/landingPoke.png"
+      "image": "/projects/landingPoke.png",
+      "description": "An application designed to render Pokemon, create custom Pokemon, and sort them by type, attack, or alphabetically. It allows filtering by those from the API or those from the user-created database."
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "type": "Interactive R&M",
       "repo": "https://github.com/JoseEnriquez88/Rick_And_Morty",
       "deploy": null,
-      "image": "/projects/homeRick.png"
+      "image": "/projects/homeRick.png",
+      "description": "Application in which characters from the animated TV series Rick & Morty are displayed in card formats. You can search for the characters by their ID, with a range of characters of up to 826. It includes a login feature for accessing and saving favorite characters."
     }
   ]
 }
