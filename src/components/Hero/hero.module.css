@@ -51,7 +51,8 @@
 a.button {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  gap: 5px;
   font-family: Prototype, sans-serif;
   font-weight: 500;
   color: #ececec;
@@ -71,11 +72,7 @@ a.button:hover {
   background-color: rgb(34, 196, 112);
 }
 
-.icon {
-  transform: translate(-40%, -20%);
-}
-
-.icon:hover {
+a.button:hover span {
   color: #000;
 }
 

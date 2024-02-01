@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./hero.module.css";
-import { Typewriter, Cursor } from "react-simple-typewriter";
+import { Typewriter } from "react-simple-typewriter";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 import Waves from "../Waves/Waves";
 
@@ -13,7 +13,7 @@ const Hero = () => {
   };
 
   const handleDone = () => {
-    console.log(`Done after 5 loops!`);
+    console.log(`You got a fast car!`);
   };
 
   return (
@@ -27,7 +27,6 @@ const Hero = () => {
                 words={["Full stack", "React"]}
                 loop={false}
                 cursor
-                // cursorStyle=""
                 typeSpeed={80}
                 deleteSpeed={50}
                 delaySpeed={1500}
@@ -42,7 +41,7 @@ const Hero = () => {
             download="englishResume.pdf"
             className={styles.button}
           >
-            <span className={styles.icon}>
+            <span>
               <CloudDownloadIcon />
             </span>
             Resume
