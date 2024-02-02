@@ -1,0 +1,16 @@
+.mainContainer {
+  height: calc(100vh);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 80%;
+  height: 90%;
+  margin: auto;
+}

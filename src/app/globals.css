@@ -11,12 +11,6 @@ html {
 }
 
 body {
-  /* background-image: url("../src/assets/darkBackground.jpg"); */
-  /*  background-position: center center; */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  /* background-attachment: fixed; */
-  /* min-height: 100vh; */
   background: #000;
   /* mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); */
 }
@@ -25,4 +19,3 @@ a {
   text-decoration: none;
   color: inherit;
 }
-

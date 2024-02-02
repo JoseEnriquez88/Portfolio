@@ -1,6 +1,7 @@
 "use client";
 import styles from "./projects.module.css";
 import Cards from "../Cards/Cards";
+import CardsList from "../Cards/CardsList";
 
 const Projects = () => {
   return (
@@ -10,9 +11,8 @@ const Projects = () => {
           <h1 className={styles.title}>Projects</h1>
           <h2>See my latest works</h2>
         </div>
-        {/* <hr style={{color: "rgb(34,196,112)"}}/> */}
         <div className={styles.projectContainer}>
-          <Cards />
+          <CardsList />
         </div>
       </div>
     </div>

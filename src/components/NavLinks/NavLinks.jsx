@@ -17,7 +17,7 @@ const PillTabs = () => {
         smooth={true}
         duration={100}
         onMouseEnter={() => setHoveredIndex(i)}
-        onMouseLeave={() => setHoveredIndex(0)}
+        onMouseLeave={() => setHoveredIndex(i)}
         style={{
           position: "relative",
           padding: "0.5rem 1rem",
