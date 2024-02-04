@@ -33,7 +33,7 @@
 }
 
 .icon:hover {
-  color: rgb(34, 196, 112) !important;
+  color: rgb(34, 196, 112);
   transition: color 0.3s ease-in-out;
 }
 
