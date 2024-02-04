@@ -23,9 +23,9 @@
   display: flex;
   gap: 40px;
   color: #ececec;
-  width: 80%;
-  margin-top: 100px;
-  margin-left: -300px;
+  /* width: 80%; */
+  margin-top: 120px;
+  margin-left: -775px;
 }
 
 .title {
@@ -159,12 +159,6 @@
 
   .formContainer {
     margin-top: 10px;
-  }
-
-  .button:hover,
-  .button:focus,
-  .button:active {
-    background-color: rgb(58, 50, 92);
   }
 }
 
