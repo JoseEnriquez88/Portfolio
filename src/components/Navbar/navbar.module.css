@@ -8,15 +8,13 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 100px;
+  padding: 0 100px;
   display: flex;
+  /* background-color: rgba(0, 0, 0, 0.7); */
   justify-content: space-between;
   align-items: center;
-  /* background: rgba(255, 255, 255, 0.1); */
-  /* backdrop-filter: blur(10px); */
-  /* -webkit-backdrop-filter: blur(10px); */
-  z-index: 1;
   font-family: Prototype, sans-serif;
+  z-index: 1;
 }
 
 .logo {

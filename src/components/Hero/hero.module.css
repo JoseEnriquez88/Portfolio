@@ -59,17 +59,14 @@ a.button {
   width: 200px;
   padding: 15px;
   border-radius: 20px;
-  border: 1px solid rgb(150, 159, 155);
-  background: transparent;
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
-    border 0.3s ease-in-out;
+  background-color: #232323;
+  border: 1px solid rgb(52, 52, 52);
+  transition: border 0.3s ease-in-out;
   cursor: pointer;
 }
 
 a.button:hover {
-  color: #000;
-  border: 1px solid rgb(34, 196, 112);
-  background-color: rgb(34, 196, 112);
+  border: 1px solid rgb(150, 159, 155);
 }
 
 a.button:hover span {

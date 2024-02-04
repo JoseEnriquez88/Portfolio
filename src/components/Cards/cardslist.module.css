@@ -53,8 +53,8 @@
 
 .content:hover {
   border: 1px solid rgb(150, 159, 155);
+  /* border: 1px solid #5c5b5b; */
 }
-/* border: 1px solid #5c5b5b; */
 
 .heading {
   font-family: Prototype, sans-serif;
