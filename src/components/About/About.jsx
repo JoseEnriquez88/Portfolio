@@ -1,18 +1,10 @@
 import styles from "./about.module.css";
 import StackSlider from "../StackSlider/StackSlider";
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import EmailIcon from '@mui/icons-material/Email';
-
-const links = {
-  discord: "https://discord.com/channels/954778773654478940",
-  github: "https://github.com/JoseEnriquez88",
-  linkedin: "https://www.linkedin.com/in/joseenriquez80/",
-  whatsapp:
-    "https://api.whatsapp.com/send/?phone=3794277204&text&type=phone_number&app_absent=0",
-  mail: "mailto:eenriquez.jose@gmail.com",
-};
+import socials from "@/utils/socials";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import EmailIcon from "@mui/icons-material/Email";
 
 const About = () => {
   return (
@@ -32,6 +24,20 @@ const About = () => {
                   like SQL, Prisma, and PostgreSQL to ensure efficient
                   performance and effective data management.
                 </article>
+                <div className={styles.socialsContainer}>
+                  <a href={socials.github}>
+                    <GitHubIcon className={styles.icon} />
+                  </a>
+                  <a href={socials.linkedin}>
+                    <LinkedInIcon className={styles.icon} />
+                  </a>
+                  <a href={socials.whatsapp}>
+                    <WhatsAppIcon className={styles.icon} />
+                  </a>
+                  <a href={socials.mail}>
+                    <EmailIcon className={styles.icon} />
+                  </a>
+                </div>
               </div>
             </div>
             <div className={styles.imageContainer}>

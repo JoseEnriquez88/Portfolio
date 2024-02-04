@@ -1,3 +1,6 @@
+"use client";
+import socials from "@/utils/socials";
+
 const Footer = () => {
   return (
     <div>

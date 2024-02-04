@@ -1,6 +1,7 @@
 import styles from "./cardslist.module.css";
 import projects from "@/utils/projects.json";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import InsertLinkIcon from "@mui/icons-material/InsertLink";
 
 const CardsList = () => {
   return (
@@ -30,8 +31,8 @@ const CardsList = () => {
                       rel="noopener noreferrer"
                       className={styles.repoButton}
                     >
-                      <ArrowForwardIcon />
                       Repo
+                      <ArrowForwardIcon />
                     </a>
                     {project.deploy && (
                       <a
@@ -40,8 +41,8 @@ const CardsList = () => {
                         rel="noopener noreferrer"
                         className={styles.deployButton}
                       >
-                        <ArrowForwardIcon />
                         Deploy
+                        <InsertLinkIcon />
                       </a>
                     )}
                   </div>
@@ -62,8 +63,8 @@ const CardsList = () => {
                       rel="noopener noreferrer"
                       className={styles.repoButton}
                     >
-                      <ArrowForwardIcon />
                       Repo
+                      <ArrowForwardIcon />
                     </a>
                     {project.deploy && (
                       <a
@@ -72,8 +73,8 @@ const CardsList = () => {
                         rel="noopener noreferrer"
                         className={styles.deployButton}
                       >
-                        <ArrowForwardIcon />
                         Deploy
+                        <InsertLinkIcon />
                       </a>
                     )}
                   </div>
