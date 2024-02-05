@@ -22,7 +22,7 @@ const Hero = () => {
         <div className={styles.dataContainer}>
           <h1 className={styles.name}>Jose Enriquez</h1>
           <h2>
-            <span>
+            <span className={styles.seniority}>
               <Typewriter
                 words={["Full stack", "React"]}
                 loop={false}

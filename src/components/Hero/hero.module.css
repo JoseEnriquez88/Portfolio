@@ -45,7 +45,6 @@
 .dataContainer h2 {
   font-size: 50px;
   font-family: Prototype, sans-serif;
-  z-index: 2;
 }
 
 a.button {
@@ -76,4 +75,34 @@ a.button:hover span {
 .wavesContainer {
   margin-top: 50px;
   mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+@media (max-width: 800px) {
+  .container,
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .dataContainer {
+    width: 100vw;
+    margin-top: 50px;
+  }
+
+  .name {
+    font-size: 60px;
+    margin: 0 auto;
+  }
+
+  .dataContainer h2 {
+    font-size: 40px;
+  }
+  .seniority {
+    font-size: 40px;
+  }
+
+  .wavesContainer {
+    margin-top: -400px;
+  }
 }

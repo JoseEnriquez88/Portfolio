@@ -10,7 +10,6 @@
   width: 100%;
   padding: 0 100px;
   display: flex;
-  /* background-color: rgba(0, 0, 0, 0.7); */
   justify-content: space-between;
   align-items: center;
   font-family: Prototype, sans-serif;
@@ -46,11 +45,16 @@
 }
 
 .itemsContainer li:hover {
-  /* color: rgb(34, 196, 112); */
-  /* color: #00be5c; */
   color: rgb(0, 190, 92);
 }
 
 .iconContainer {
   display: none;
+}
+
+
+@media (max-width: 800px){
+  .navbar{
+    display: none;
+  }
 }
