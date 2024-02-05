@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 
-const successNotify = () => {
+export const successNotify = () => {
   toast.success("Thanks for communicating. I'll be in touch soon", {
     position: "bottom-right",
     autoClose: 5000,
@@ -10,11 +10,10 @@ const successNotify = () => {
     draggable: true,
     progress: undefined,
     theme: "dark",
-    transition: Bounce,
   });
 };
 
-const errorNotify = () => {
+export const errorNotify = () => {
   toast.error("There was an error. Please try again", {
     position: "bottom-right",
     autoClose: 5000,
@@ -24,11 +23,10 @@ const errorNotify = () => {
     draggable: true,
     progress: undefined,
     theme: "dark",
-    transition: Bounce,
   });
 };
 
-const warnNotify = () => {
+export const warnNotify = () => {
   toast.warn("Make sure you have completed all fields.", {
     position: "bottom-right",
     autoClose: 5000,
@@ -38,8 +36,5 @@ const warnNotify = () => {
     draggable: true,
     progress: undefined,
     theme: "dark",
-    transition: Bounce,
   });
 };
-
-export default { successNotify, errorNotify, warnNotify };

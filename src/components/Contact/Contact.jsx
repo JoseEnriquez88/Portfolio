@@ -3,11 +3,9 @@ import styles from "./contact.module.css";
 import { useState, useRef } from "react";
 import Footer from "../Footer/Footer";
 import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
+import { successNotify, warnNotify, errorNotify } from "@/utils/toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-const { NEXT_PUBLIC_SERVICE_ID, NEXT_PUBLIC_TEMPLATE_ID, NEXT_PUBLIC_USER_ID } =
-  process.env;
 
 const Contact = () => {
   const formRef = useRef();
@@ -16,45 +14,6 @@ const Contact = () => {
     email: "",
     message: "",
   });
-
-  const successNotify = () => {
-    toast.success("Thanks for communicating. I'll be in touch soon", {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
-  };
-
-  const errorNotify = () => {
-    toast.error("There was an error. Please try again", {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
-  };
-
-  const warnNotify = () => {
-    toast.warn("Make sure you have completed all fields.", {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
-  };
 
   const handleChange = (event) => {
     setFormData({
@@ -77,10 +36,10 @@ const Contact = () => {
 
     await emailjs
       .sendForm(
-        "service_wd4xr5o",
-        "template_rliwto9",
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
         formRef.current,
-        "vxpkT-TbZOwb3eaHL"
+        process.env.NEXT_PUBLIC_USER_ID
       )
       .then(
         (result) => {
