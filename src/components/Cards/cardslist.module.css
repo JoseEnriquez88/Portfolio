@@ -103,3 +103,30 @@
 .deployButton:hover {
   border: 1px solid rgb(150, 159, 155);
 }
+
+@media (max-width: 800px) {
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .frontContent{
+    width: 100vw;
+  }
+
+  .content{
+    width: 98vw;
+  }
+
+  .article{
+    width: 90vw;
+    text-align: left;
+  }
+
+  .iconContainer{
+    margin-bottom: 20px;
+  }
+}
