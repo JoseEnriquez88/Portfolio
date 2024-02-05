@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Protype";
+  src: url("/fonts/Prototype.ttf") format("truetype");
+}F
+
+.icon {
+  color: rgb(34, 196, 112);
+  font-family: Prototype, sans-serif;
+}
