@@ -107,6 +107,7 @@
   color: #ececec;
   transition: border 0.3s ease-in-out;
   resize: none;
+  font-family: Prototype, sans-serif;
 }
 
 .input:focus,
@@ -121,6 +122,7 @@
   background-color: #232323;
   border: 1px solid rgb(52, 52, 52);
   border-radius: 20px;
+  font-family: Prototype, sans-serif;
   font-weight: 500;
   color: #ececec;
   transition: border 0.3s ease-in-out;
