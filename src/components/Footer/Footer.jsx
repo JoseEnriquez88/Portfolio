@@ -20,13 +20,13 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.linksContainer}>
           <a href={socials.github}>
-            <GitHubIcon className={styles.icon} />
+            <GitHubIcon />
           </a>
           <a href={socials.linkedin}>
-            <LinkedInIcon className={styles.icon} />
+            <LinkedInIcon />
           </a>
           <a href={socials.whatsapp}>
-            <WhatsAppIcon className={styles.icon} />
+            <WhatsAppIcon />
           </a>
           <a href={socials.mail}>
             <EmailIcon className={styles.icon} />

@@ -1,9 +1,33 @@
 "use client";
-import React, { useState } from "react";
 import styles from "./hero.module.css";
+import { motion } from "framer-motion";
+import React, { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 import Waves from "../Waves/Waves";
+
+const textVariants = {
+  initial: {
+    y: 0,
+    opacity: 0,
+  },
+  animate: {
+    y: -25,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+  scrollButton: {
+    opacity: 0,
+    y: 50,
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+    },
+  },
+};
 
 const Hero = () => {
   const [count, setCount] = useState(0);
@@ -19,7 +43,12 @@ const Hero = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <div className={styles.dataContainer}>
+        <motion.div
+          className={styles.dataContainer}
+          variants={textVariants}
+          initial="initial"
+          animate="animate"
+        >
           <h1 className={styles.name}>Jose Enriquez</h1>
           <h2>
             <span className={styles.seniority}>
@@ -39,14 +68,13 @@ const Hero = () => {
           <a
             href="/resume/JoseCarlosEnriquezDominguezEnglishResume.pdf"
             download="englishResume.pdf"
-            className={styles.button}
           >
             <span>
               <CloudDownloadIcon />
             </span>
             Resume
           </a>
-        </div>
+        </motion.div>
       </div>
       <div className={styles.wavesContainer}>
         <Waves />

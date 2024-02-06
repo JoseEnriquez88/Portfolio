@@ -28,3 +28,11 @@
 .img:hover {
   filter: none;
 }
+
+@media (max-width: 800px){
+  @keyframes slide {
+    to {
+      transform: translate(calc(-100vw - 100rem));
+    }
+  }
+}

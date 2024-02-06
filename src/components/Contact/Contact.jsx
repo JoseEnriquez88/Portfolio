@@ -2,6 +2,7 @@
 import styles from "./contact.module.css";
 import { useRef, useEffect, useState } from "react";
 import Footer from "../Footer/Footer";
+import BottomNav from "../NavBarBottom/BottomNav";
 import emailjs from "@emailjs/browser";
 import { successNotify, warnNotify, errorNotify } from "@/utils/toastify";
 import { ToastContainer } from "react-toastify";
@@ -17,7 +18,16 @@ const Contact = () => {
   });
 
   useEffect(() => {
-    setIsMobile(window.innerWidth <= 800);
+    const showNav = () => {
+      setIsMobile(window.innerWidth <= 800);
+    };
+
+    showNav();
+    window.addEventListener("resize", showNav);
+
+    return () => {
+      window.removeEventListener("resize", showNav);
+    };
   }, []);
 
   const handleChange = (event) => {
@@ -103,7 +113,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      {!isMobile && <Footer />}
+      {!isMobile ? <Footer /> : <BottomNav />}
     </div>
   );
 };

@@ -4,7 +4,6 @@
 }
 
 .container {
-  /* height: calc(100vh); */
   overflow: hidden;
   position: relative;
 }
@@ -48,9 +47,6 @@
 }
 
 @media (max-width: 800px) {
-  .container {
-  }
-
   .wrapper {
     width: 100vw;
   }
