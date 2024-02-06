@@ -1,15 +1,16 @@
 "use client";
 import styles from "./projects.module.css";
 import { motion } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
 import CardsList from "../Cards/CardsList";
 
 const textContainerVariants = {
   initial: {
-    y: -100,
+    y: 0,
     opacity: 0,
   },
   animate: {
-    y: 0,
+    y: -25,
     opacity: 1,
     transition: {
       duration: 1,
@@ -27,13 +28,41 @@ const textContainerVariants = {
 };
 
 const Projects = () => {
+  const textContainerRef = useRef();
+  const [containerInView, setContainerInView] = useState(false);
+
+  const handleScroll = () => {
+    const textElement = textContainerRef.current;
+    if (textElement) {
+      const textRect = textElement.getBoundingClientRect();
+      setContainerInView(textRect.top < window.innerHeight);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    handleScroll();
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <div className={styles.textContainer}>
+        <motion.div
+          className={styles.textContainer}
+          variants={textContainerVariants}
+          initial="initial"
+          animate={containerInView && "animate"}
+          ref={textContainerRef}
+        >
           <h1 className={styles.title}>Projects</h1>
           <h2>See my latest works</h2>
-        </div>
+        </motion.div>
         <div className={styles.projectContainer}>
           <CardsList />
         </div>
