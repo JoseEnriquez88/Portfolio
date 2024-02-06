@@ -133,6 +133,11 @@
   border: 1px solid rgb(150, 159, 155);
 }
 
+.toaster {
+  margin-bottom: -150px;
+  margin-right: -150px;
+}
+
 @media (max-width: 800px) {
   .container {
     height: calc(100vh);
@@ -179,6 +184,7 @@
   }
 
   .toaster {
-    margin-bottom: 100px;
+    margin-bottom: -70px;
+    margin-left: -6px;
   }
 }

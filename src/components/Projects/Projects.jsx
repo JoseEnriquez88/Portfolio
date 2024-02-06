@@ -1,10 +1,10 @@
 "use client";
 import styles from "./projects.module.css";
-import { motion } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import CardsList from "../Cards/CardsList";
 
-const textContainerVariants = {
+const textVariants = {
   initial: {
     y: 0,
     opacity: 0,
@@ -19,7 +19,7 @@ const textContainerVariants = {
   },
   scrollButton: {
     opacity: 0,
-    y: 10,
+    y: 50,
     transition: {
       duration: 2,
       repeat: Infinity,
@@ -28,36 +28,17 @@ const textContainerVariants = {
 };
 
 const Projects = () => {
-  const textContainerRef = useRef();
-  const [containerInView, setContainerInView] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const textElement = textContainerRef.current;
-      if (textElement) {
-        const textRect = textElement.getBoundingClientRect();
-        setContainerInView(textRect.top < window.innerHeight);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  // useEffect(() => {
-  //   handleScroll();
-  // }, []);
+  const ref = useRef();
+  const isInView = useInView(ref, { threshold: 0.5 });
 
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <motion.div
           className={styles.textContainer}
-          variants={textContainerVariants}
-          initial="initial"
-          animate={containerInView && "animate"}
-          ref={textContainerRef}
+          variants={textVariants}
+          ref={ref}
+          animate={isInView && "animate"}
         >
           <h1 className={styles.title}>Projects</h1>
           <h2>See my latest works</h2>

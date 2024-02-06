@@ -65,7 +65,7 @@ const Hero = () => {
             download="englishResume.pdf"
             aria-label="Download English Resume"
           >
-            <span>
+            <span className={styles.icon}>
               <CloudDownloadIcon alt="Resume" />
             </span>
             Resume

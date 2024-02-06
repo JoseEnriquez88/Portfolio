@@ -1,15 +1,41 @@
 "use client";
 import styles from "./contact.module.css";
 import { useRef, useEffect, useState } from "react";
-import Footer from "../Footer/Footer";
-import BottomNav from "../NavBarBottom/BottomNav";
-import emailjs from "@emailjs/browser";
+import { motion, useInView } from "framer-motion";
 import { successNotify, warnNotify, errorNotify } from "@/utils/toastify.js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
+import Footer from "../Footer/Footer";
+import BottomNav from "../NavBarBottom/BottomNav";
+
+const titleVariants = {
+  initial: {
+    y: 0,
+    opacity: 0,
+  },
+  animate: {
+    y: -25,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+  scrollButton: {
+    opacity: 0,
+    y: 10,
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+    },
+  },
+};
 
 const Contact = () => {
+  const ref = useRef();
   const formRef = useRef();
+  const isInView = useInView(ref, { threshold: 0.5 });
   const [isMobile, setIsMobile] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -75,14 +101,35 @@ const Contact = () => {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h1 className={styles.title}>Let's get in touch!</h1>
+          <motion.h1
+            className={styles.title}
+            variants={titleVariants}
+            initial="initial"
+            animate={isInView && "animate"}
+            ref={ref}
+          >
+            Let's get in touch!
+          </motion.h1>
         </div>
         <div className={styles.subContainer}>
           <div className={styles.imageContainer}>
             <img src="/SVG/contact.png" alt="image" className={styles.image} />
           </div>
           <div className={styles.formContainer}>
-            <form ref={formRef} onSubmit={handleSubmit} className={styles.form}>
+            <motion.form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className={styles.form}
+              initial={{
+                y: 0,
+                opacity: 0,
+              }}
+              animate={{
+                y: -40,
+                opacity: 1,
+              }}
+              transition={{ duration: 2 }}
+            >
               <input
                 type="text"
                 name="name"
@@ -109,7 +156,7 @@ const Contact = () => {
               />
               <button className={styles.button}>Send</button>
               <ToastContainer className={styles.toaster} />
-            </form>
+            </motion.form>
           </div>
         </div>
       </div>
