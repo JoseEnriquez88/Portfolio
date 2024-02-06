@@ -4,7 +4,6 @@
 }
 
 .container {
-  /* height: 100vh; */
   overflow: hidden;
   position: relative;
   font-family: Prototype, sans-serif;
@@ -119,7 +118,8 @@
 
 @media (max-width: 800px) {
   .container {
-    margin: 0;
+    height: calc(100vh);
+    /* margin: 0; */
   }
   .wrapper {
     width: 100vw;
@@ -128,7 +128,6 @@
   .subContainer,
   .textContainer {
     width: 100vw;
-    margin-top: 100px;
   }
 
   .textContainer {
@@ -157,7 +156,7 @@
   }
 
   .stackContainer {
-    margin-top: -50px;
+    margin-top: -100px;
     width: 100vw;
   }
 }
