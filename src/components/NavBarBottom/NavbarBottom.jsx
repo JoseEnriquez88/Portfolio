@@ -1,28 +1,52 @@
 "use client";
-import { useState } from "react";
-import { BottomNavigation, BottomNavigationAction } from "@mui/material";
+import styles from "./navbarBottom.module.css";
+import { Link } from "react-scroll";
 import HomeIcon from "@mui/icons-material/Home";
 import WorkIcon from "@mui/icons-material/Work";
 import PersonIcon from "@mui/icons-material/Person";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 
 const NavbarBottom = () => {
-  const [value, setValue] = useState(0);
-
   return (
-    <BottomNavigation
-      sx={{ width: "100%", position: "absolute", bottom: 0 }}
-      value={value}
-      onChange={(event, newValue) => {
-        setValue(newValue);
-      }}
-      showLabels
-    >
-      <BottomNavigationAction label="home" icon={<HomeIcon />} />
-      <BottomNavigationAction label="projects" icon={<WorkIcon />} />
-      <BottomNavigationAction label="about" icon={<PersonIcon />} />
-      <BottomNavigationAction label="contact" icon={<ContactPageIcon />} />
-    </BottomNavigation>
+    <div className={styles.container}>
+      <ul className={styles.iconContainer}>
+        <Link to="home">
+          <li>
+            <span className={styles.icon}>
+              <HomeIcon />
+            </span>
+            Home
+          </li>
+        </Link>
+        <Link to="projects">
+          <li>
+            <span className={styles.icon}>
+              <WorkIcon />
+            </span>
+            Projects
+          </li>
+        </Link>
+        <Link to="home">
+          <img src="icon.ico" alt="logo" className={styles.logo} />
+        </Link>
+        <Link to="about">
+          <li>
+            <span className={styles.icon}>
+              <PersonIcon />
+            </span>
+            About
+          </li>
+        </Link>
+        <Link to="contact">
+          <li>
+            <span className={styles.icon}>
+              <ContactPageIcon />
+            </span>
+            Contact
+          </li>
+        </Link>
+      </ul>
+    </div>
   );
 };
 

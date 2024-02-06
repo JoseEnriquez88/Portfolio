@@ -1,6 +1,5 @@
 "use client";
 import styles from "./projects.module.css";
-import Cards from "../Cards/Cards";
 import CardsList from "../Cards/CardsList";
 
 const Projects = () => {

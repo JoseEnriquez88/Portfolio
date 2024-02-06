@@ -105,7 +105,7 @@
 }
 
 @media (max-width: 800px) {
-  .card{
+  .card {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,20 +113,31 @@
     gap: 1rem;
   }
 
-  .frontContent{
+  .frontContent {
     width: 100vw;
   }
 
-  .content{
+  .content {
     width: 98vw;
+    outline: none;
+    transition: border 0.3s ease-in-out;
   }
 
-  .article{
+  .content:hover,
+  .content:active {
+    border: 1px solid rgb(150, 159, 155);
+  }
+
+  .article {
     width: 90vw;
     text-align: left;
   }
 
-  .iconContainer{
+  .repoButton,
+  .deployButton {
+    outline: none;
+  }
+  .iconContainer {
     margin-bottom: 20px;
   }
 }

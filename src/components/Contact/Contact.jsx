@@ -1,6 +1,6 @@
 "use client";
 import styles from "./contact.module.css";
-import { useState, useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import Footer from "../Footer/Footer";
 import emailjs from "@emailjs/browser";
 import { successNotify, warnNotify, errorNotify } from "@/utils/toastify";
@@ -9,11 +9,16 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const formRef = useRef();
+  const [isMobile, setIsMobile] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 800);
+  }, []);
 
   const handleChange = (event) => {
     setFormData({
@@ -93,12 +98,12 @@ const Contact = () => {
                 className={styles.textarea}
               />
               <button className={styles.button}>Send</button>
-              <ToastContainer />
+              <ToastContainer className={styles.toaster} />
             </form>
           </div>
         </div>
       </div>
-      <Footer />
+      {!isMobile && <Footer />}
     </div>
   );
 };

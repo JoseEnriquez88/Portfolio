@@ -13,7 +13,13 @@
   justify-content: space-between;
   align-items: center;
   font-family: Prototype, sans-serif;
+  transition: background-color 0.3s ease-in-out;
   z-index: 1;
+}
+
+.navbar.active {
+  background: #232323;
+  border-bottom: 1px solid rgb(52, 52, 52);
 }
 
 .logo {
@@ -36,6 +42,7 @@
   list-style: none;
   color: #ececec;
   font-weight: bold;
+  z-index: 2;
 }
 
 .itemsContainer li {
@@ -52,9 +59,8 @@
   display: none;
 }
 
-
-@media (max-width: 800px){
-  .navbar{
+@media (max-width: 800px) {
+  .navbar {
     display: none;
   }
 }

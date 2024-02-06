@@ -1,10 +1,9 @@
-import styles from "./page.module.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero/Hero";
 import Projects from "@/components/Projects/Projects";
 import About from "@/components/About/About";
 import Contact from "@/components/Contact/Contact";
-import NavbarBottom from "@/components/NavBarBottom/NavbarBottom";
+import BottomNav from "@/components/NavBarBottom/BottomNav";
 
 export default function Home() {
   return (
@@ -21,6 +20,7 @@ export default function Home() {
       </section>
       <section id="contact">
         <Contact />
+        <BottomNav />
       </section>
     </div>
   );
