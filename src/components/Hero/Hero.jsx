@@ -30,14 +30,10 @@ const textVariants = {
 };
 
 const Hero = () => {
-  const [count, setCount] = useState(0);
+  const [downloadCount, setDownloadCount] = useState(0);
 
   const handleType = (count) => {
-    setCount(count);
-  };
-
-  const handleDone = () => {
-    console.log(`You got a fast car!`);
+    setDownloadCount(count);
   };
 
   return (
@@ -59,7 +55,6 @@ const Hero = () => {
                 typeSpeed={80}
                 deleteSpeed={50}
                 delaySpeed={1500}
-                onLoopDone={handleDone}
                 onType={handleType}
               />
             </span>{" "}
@@ -68,9 +63,10 @@ const Hero = () => {
           <a
             href="/resume/JoseCarlosEnriquezDominguezEnglishResume.pdf"
             download="englishResume.pdf"
+            aria-label="Download English Resume"
           >
             <span>
-              <CloudDownloadIcon />
+              <CloudDownloadIcon alt="Resume" />
             </span>
             Resume
           </a>

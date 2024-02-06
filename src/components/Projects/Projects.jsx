@@ -31,24 +31,23 @@ const Projects = () => {
   const textContainerRef = useRef();
   const [containerInView, setContainerInView] = useState(false);
 
-  const handleScroll = () => {
-    const textElement = textContainerRef.current;
-    if (textElement) {
-      const textRect = textElement.getBoundingClientRect();
-      setContainerInView(textRect.top < window.innerHeight);
-    }
-  };
-
   useEffect(() => {
+    const handleScroll = () => {
+      const textElement = textContainerRef.current;
+      if (textElement) {
+        const textRect = textElement.getBoundingClientRect();
+        setContainerInView(textRect.top < window.innerHeight);
+      }
+    };
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  useEffect(() => {
-    handleScroll();
-  }, []);
+  // useEffect(() => {
+  //   handleScroll();
+  // }, []);
 
   return (
     <div className={styles.container}>

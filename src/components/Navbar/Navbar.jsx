@@ -9,7 +9,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const navColored = () => {
-      if (window.scrollY >= 950) {
+      if (typeof window !== "undefined" && window.scrollY >= 950) {
         setNavbar(true);
       } else {
         setNavbar(false);

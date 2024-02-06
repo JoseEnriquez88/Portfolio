@@ -19,17 +19,17 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.linksContainer}>
-          <a href={socials.github}>
+          <a href={socials.github} rel="noopener noreferrer">
             <GitHubIcon />
           </a>
-          <a href={socials.linkedin}>
+          <a href={socials.linkedin} rel="noopener noreferrer">
             <LinkedInIcon />
           </a>
-          <a href={socials.whatsapp}>
+          <a href={socials.whatsapp} rel="noopener noreferrer">
             <WhatsAppIcon />
           </a>
-          <a href={socials.mail}>
-            <EmailIcon className={styles.icon} />
+          <a href={socials.mail} rel="noopener noreferrer">
+            <EmailIcon alt="Email" className={styles.icon} />
           </a>
         </div>
         <div className={styles.textContainer}>

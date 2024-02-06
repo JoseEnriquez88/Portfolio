@@ -1,52 +1,14 @@
+"use client";
 import styles from "./cardslist.module.css";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import projects from "@/utils/projects.json";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import InsertLinkIcon from "@mui/icons-material/InsertLink";
 
-const containerVariants = {
-  animate: {
-    transition: {
-      staggerChildren: 0.5,
-    },
-  },
-};
-
-const cardsVariants = {
-  initial: {
-    y: 0,
-    opacity: 0,
-  },
-  animate: {
-    y: -25,
-    opacity: 1,
-    transition: {
-      duration: 1.5,
-    },
-  },
-};
-
 const content = () => {
-  const ref = useRef();
-  const isInView = useInView(ref, { margin: "-100px" });
-
   return (
-    <motion.div
-      className={styles.container}
-      variants={containerVariants}
-      initial="initial"
-      animate={isInView && "animate"}
-      ref={useRef}
-    >
+    <div className={styles.container}>
       {projects.data.map((project, index) => (
-        <motion.div
-          className={styles.cardContainer}
-          key={index}
-          variants={cardsVariants}
-          animate={isInView && "animate"}
-          ref={ref}
-        >
+        <div className={styles.cardContainer} key={index}>
           <div className={styles.card}>
             <>
               <div className={styles.frontContent}>
@@ -83,9 +45,9 @@ const content = () => {
               </div>
             </>
           </div>
-        </motion.div>
+        </div>
       ))}
-    </motion.div>
+    </div>
   );
 };
 

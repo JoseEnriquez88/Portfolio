@@ -12,7 +12,7 @@ const NavbarBottom = () => {
       <ul className={styles.iconContainer}>
         <Link to="home">
           <li>
-            <span className={styles.icon}>
+            <span className={styles.icon} role="img">
               <HomeIcon />
             </span>
             Home
@@ -20,7 +20,7 @@ const NavbarBottom = () => {
         </Link>
         <Link to="projects">
           <li>
-            <span className={styles.icon}>
+            <span className={styles.icon} role="img">
               <WorkIcon />
             </span>
             Projects
@@ -31,7 +31,7 @@ const NavbarBottom = () => {
         </Link>
         <Link to="about">
           <li>
-            <span className={styles.icon}>
+            <span className={styles.icon} role="img">
               <PersonIcon />
             </span>
             About
@@ -39,7 +39,7 @@ const NavbarBottom = () => {
         </Link>
         <Link to="contact">
           <li>
-            <span className={styles.icon}>
+            <span className={styles.icon} role="img">
               <ContactPageIcon />
             </span>
             Contact
