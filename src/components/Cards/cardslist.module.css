@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Prototype";
-  src: url("/fonts/Prototype.ttf") format("truetype");
+  src: url("../../assets/fonts/Prototype.ttf") format("truetype");
 }
 
 /* .container */
