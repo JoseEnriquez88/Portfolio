@@ -120,17 +120,17 @@ const About = () => {
                   animate={isInView && "animate"}
                   ref={ref}
                 >
-                  <a href={socials.github}>
-                    <GitHubIcon className={styles.icon} />
+                  <a href={socials.Github}>
+                    <GitHubIcon className={styles.icon} titleAccess="Github"/>
                   </a>
-                  <a href={socials.linkedin}>
-                    <LinkedInIcon className={styles.icon} />
+                  <a href={socials.Linkedin}>
+                    <LinkedInIcon className={styles.icon} titleAccess="Linkedin"/>
                   </a>
-                  <a href={socials.whatsapp}>
-                    <WhatsAppIcon className={styles.icon} />
+                  <a href={socials.Whatsapp}>
+                    <WhatsAppIcon className={styles.icon} titleAccess="Whatsapp"/>
                   </a>
-                  <a href={socials.mail}>
-                    <EmailIcon className={styles.icon} />
+                  <a href={socials.Mail}>
+                    <EmailIcon className={styles.icon} titleAccess="Email"/>
                   </a>
                 </motion.div>
               </div>

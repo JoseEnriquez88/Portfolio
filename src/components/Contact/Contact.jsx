@@ -8,6 +8,9 @@ import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 import Footer from "../Footer/Footer";
 import BottomNav from "../NavBarBottom/BottomNav";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import EmailIcon from '@mui/icons-material/Email';
 
 const titleVariants = {
   initial: {
@@ -112,8 +115,27 @@ const Contact = () => {
           </motion.h1>
         </div>
         <div className={styles.subContainer}>
-          <div className={styles.imageContainer}>
-            <img src="/SVG/contact.png" alt="image" className={styles.image} />
+          <div className={styles.itemsContainer}>
+            <ul>
+              <li>
+                <LocationOnIcon
+                  className={styles.icon}
+                  style={{ fontSize: 45 }}
+                />
+                Corrientes, Corrientes. Argentina
+              </li>
+              <li>
+                <PhoneAndroidIcon
+                  className={styles.icon}
+                  style={{ fontSize: 45 }}
+                />
+                +543 794 277204
+              </li>
+              <li>
+                <EmailIcon className={styles.icon} style={{ fontSize: 45 }} />
+                eenriquez.jose@gmail.com
+              </li>
+            </ul>
           </div>
           <div className={styles.formContainer}>
             <motion.form

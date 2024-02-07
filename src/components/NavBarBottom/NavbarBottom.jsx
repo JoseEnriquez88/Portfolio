@@ -59,7 +59,7 @@ const NavbarBottom = () => {
           <span className={styles.icon} role="img">
             <MenuIcon />
           </span>
-          Menu
+          Socials
         </li>
       </ul>
       <SocialsLinks open={socialLinksOpen} onClose={handleCloseSocialLinks} />
