@@ -4,6 +4,7 @@
 }
 
 .container {
+  height: calc(100vh);
   overflow: hidden;
   position: relative;
   font-family: Prototype, sans-serif;
