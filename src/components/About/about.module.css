@@ -139,7 +139,7 @@
   }
 
   .about {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .bioContainer {
@@ -148,7 +148,10 @@
   }
 
   .text {
-    text-align: left;
+    text-align: center;
+    text-justify: inter-word;
+    font-size: 18px;
+    /* padding: 2px 0 2px 0; */
   }
 
   .imageContainer {

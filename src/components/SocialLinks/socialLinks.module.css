@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Prototype";
+  src: url("/fonts/Prototype.ttf") format("truetype");
+}
+
+.drawer {
+  background-color: #232323;
+  height: 100vh;
+  font-family: Prototype, sans-serif;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeIcon {
+  margin-left: 20px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.image {
+  width: 80px;
+}
+
+.list {
+  margin-top: 50px;
+}
+
+.button {
+  width: 250px;
+  padding-bottom: 10px;
+}
+
+/* .text  */
+
+.textContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8a8484;
+  font-size: 12px;
+  font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
+  margin-top: 400px;
+}

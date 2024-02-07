@@ -1,12 +1,24 @@
-"use client";
 import styles from "./navbarBottom.module.css";
+import { useState } from "react";
 import { Link } from "react-scroll";
 import HomeIcon from "@mui/icons-material/Home";
 import WorkIcon from "@mui/icons-material/Work";
 import PersonIcon from "@mui/icons-material/Person";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
+import MenuIcon from "@mui/icons-material/Menu";
+import SocialsLinks from "../SocialLinks/SocialsLinks";
 
 const NavbarBottom = () => {
+  const [socialLinksOpen, setSocialLinksOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    setSocialLinksOpen(true);
+  };
+
+  const handleCloseSocialLinks = () => {
+    setSocialLinksOpen(false);
+  };
+
   return (
     <div className={styles.container}>
       <ul className={styles.iconContainer}>
@@ -26,9 +38,7 @@ const NavbarBottom = () => {
             Projects
           </li>
         </Link>
-        <Link to="home">
-          <img src="icon.ico" alt="logo" className={styles.logo} />
-        </Link>
+
         <Link to="about">
           <li>
             <span className={styles.icon} role="img">
@@ -45,7 +55,14 @@ const NavbarBottom = () => {
             Contact
           </li>
         </Link>
+        <li onClick={handleMenuClick}>
+          <span className={styles.icon} role="img">
+            <MenuIcon />
+          </span>
+          Menu
+        </li>
       </ul>
+      <SocialsLinks open={socialLinksOpen} onClose={handleCloseSocialLinks} />
     </div>
   );
 };
