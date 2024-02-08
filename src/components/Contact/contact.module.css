@@ -73,10 +73,13 @@
   transition: color 0.3s ease-in-out;
 }
 
-.itemsContainer .icon:hover {
-  color: #22c470;
+.icon {
+  transition: color 0.3s ease-in-out;
 }
 
+.icon:hover {
+  color: #22c470;
+}
 
 .formContainer {
   flex: 1;

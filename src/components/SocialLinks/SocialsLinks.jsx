@@ -50,7 +50,9 @@ const SocialsLinks = ({ open, onClose }) => {
                 className={styles.link}
               >
                 <ListItemButton className={styles.button}>
-                  <ListItemIcon>{socialIcons[key]}</ListItemIcon>
+                  <ListItemIcon className={styles.icon}>
+                    {socialIcons[key]}
+                  </ListItemIcon>
                   <ListItemText primary={key} className={styles.text} />
                 </ListItemButton>
               </a>

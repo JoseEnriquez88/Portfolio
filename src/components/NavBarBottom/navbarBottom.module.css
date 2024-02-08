@@ -7,6 +7,7 @@
   width: 100%;
   bottom: 0;
   background: #232323;
+  color: #ececec;
   position: fixed;
   padding: 10px;
   border-top: 1px solid rgb(52, 52, 52);
@@ -26,15 +27,12 @@
   flex-direction: column;
   font-size: 13px;
   align-items: center;
+  transition: color 0.3s ease-in-out;
   cursor: pointer;
 }
 
-.icon:hover {
+.iconContainer li:hover {
   color: #22c470;
-}
-
-.icon:focus {
-  outline: none;
 }
 
 .logo {

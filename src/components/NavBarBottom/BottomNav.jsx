@@ -1,6 +1,7 @@
 "use client";
-import NavbarBottom from "./NavbarBottom";
 import { useState, useLayoutEffect } from "react";
+import BottomBarNavi from "./BottomBarNavi";
+import NavbarBottom from "./NavbarBottom";
 
 const BottomNav = () => {
   const [isMobile, setIsMobile] = useState(false);

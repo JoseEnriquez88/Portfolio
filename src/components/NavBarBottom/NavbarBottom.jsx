@@ -27,7 +27,7 @@ const NavbarBottom = () => {
             <span className={styles.icon} role="img">
               <HomeIcon />
             </span>
-            Home
+            <span className={styles.title}>Home</span>
           </li>
         </Link>
         <Link to="projects">
