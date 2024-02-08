@@ -84,7 +84,7 @@
   cursor: pointer;
 }
 
-.icon:hover {
+.socialsContainer .icon:hover {
   color: rgb(34, 196, 112);
 }
 

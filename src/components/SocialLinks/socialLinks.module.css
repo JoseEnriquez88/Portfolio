@@ -6,13 +6,13 @@
 .drawer {
   background-color: #232323;
   height: 100vh;
-  color: #ececec;
 }
 
 .topContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #ececec;
 }
 
 .closeIcon {
@@ -27,6 +27,7 @@
 
 .list {
   margin-top: 50px;
+  color: #ececec;
 }
 
 .button {
@@ -36,10 +37,6 @@
 
 .icon {
   color: #ececec;
-}
-
-.text {
-  font-family: "Prototype", sans-serif;
 }
 
 .textContainer {

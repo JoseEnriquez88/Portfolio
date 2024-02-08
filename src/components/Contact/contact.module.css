@@ -78,7 +78,7 @@
   transition: color 0.3s ease-in-out;
 }
 
-.icon:hover {
+.itemsContainer .icon:hover {
   color: #22c470;
 }
 
