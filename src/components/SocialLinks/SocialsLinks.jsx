@@ -14,10 +14,10 @@ import EmailIcon from "@mui/icons-material/Email";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const socialIcons = {
-  Github: <GitHubIcon />,
-  Linkedin: <LinkedInIcon />,
-  Whatsapp: <WhatsAppIcon />,
-  Mail: <EmailIcon />,
+  Github: <GitHubIcon className={styles.icon} />,
+  Linkedin: <LinkedInIcon className={styles.icon} />,
+  Whatsapp: <WhatsAppIcon className={styles.icon} />,
+  Mail: <EmailIcon className={styles.icon} />,
 };
 
 const SocialsLinks = ({ open, onClose }) => {
@@ -50,9 +50,7 @@ const SocialsLinks = ({ open, onClose }) => {
                 className={styles.link}
               >
                 <ListItemButton className={styles.button}>
-                  <ListItemIcon className={styles.icon}>
-                    {socialIcons[key]}
-                  </ListItemIcon>
+                  <ListItemIcon>{socialIcons[key]}</ListItemIcon>
                   <ListItemText primary={key} className={styles.text} />
                 </ListItemButton>
               </a>
