@@ -73,6 +73,11 @@
   transition: color 0.3s ease-in-out;
 }
 
+.itemsContainer ul li:hover  {
+  color: #22c470;
+  cursor: pointer;
+}
+
 .icon {
   color: #ececec;
   transition: color 0.3s ease-in-out;

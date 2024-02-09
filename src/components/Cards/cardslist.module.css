@@ -124,6 +124,10 @@
     transition: border 0.3s ease-in-out;
   }
 
+  .heading {
+    margin-top: 20px;
+  }
+
   .content:hover,
   .content:active {
     border: 1px solid rgb(150, 159, 155);

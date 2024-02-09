@@ -9,14 +9,14 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { FaDiscord } from "react-icons/fa";
 import EmailIcon from "@mui/icons-material/Email";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const socialIcons = {
   Github: <GitHubIcon className={styles.icon} />,
   Linkedin: <LinkedInIcon className={styles.icon} />,
-  Whatsapp: <WhatsAppIcon className={styles.icon} />,
+  Discord: <FaDiscord className={styles.discordIcon} />,
   Mail: <EmailIcon className={styles.icon} />,
 };
 

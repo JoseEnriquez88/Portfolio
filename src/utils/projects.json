@@ -7,7 +7,7 @@
       "repo": "https://github.com/JoseEnriquez88/GLAMIFY",
       "deploy": null,
       "image": "/projects/landingGlamify.png",
-      "description": "An online commerce platform, developed in a group setting, that streamlines the purchase, sale, ordering, and payment of clothing and accessories in an agile, convenient manner, with an innovative design."
+      "description": "Una plataforma de comercio online, desarrollada en un entorno grupal, que agiliza la compra, venta, pedido y pago de prendas y complementos de forma ágil, cómoda y con un diseño innovador."
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "repo": "https://github.com/JoseEnriquez88/Agilix",
       "deploy": null,
       "image": "/projects/loginAgilix.jpeg",
-      "description": "This app is a point-of-sale system that allows users to manage accounting, record purchases, create products for sale, and improve overall business management. On this project, I collaborated with a team of four people and we applied agile methodologies such as SCRUM."
+      "description": "Esta aplicación es un sistema de punto de venta que permite a los usuarios gestionar la contabilidad, registrar compras, crear productos para la venta y mejorar la gestión empresarial general. En este proyecto colaboré con un equipo de cuatro personas y aplicamos metodologías ágiles como SCRUM."
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "repo": "https://github.com/JoseEnriquez88/Pokemon",
       "deploy": "https://pokemon-jose-enriquez-88.vercel.app/",
       "image": "/projects/landingPoke.png",
-      "description": "An application designed to render Pokemon, create custom Pokemon, and sort them by type, attack, or alphabetically. It allows filtering by those from the API or those from the user-created database."
+      "description": "Aplicación diseñada para renderizar y crear pokemones personalizados, ofreciendo la capacidad de ordenarlos por tipo, ataque o alfabéticamente. Además, permite filtrar entre los pokémon de la API y los añadidos a la base de datos por el usuario."
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "repo": "https://github.com/JoseEnriquez88/Rick_And_Morty",
       "deploy": null,
       "image": "/projects/homeRick.png",
-      "description": "Application in which characters from the animated TV series Rick & Morty are displayed in card formats. You can search for the characters by their ID, with a range of characters of up to 826. It includes a login feature for accessing and saving favorite characters."
+      "description": "Aplicación en la que se muestran personajes de la serie animada de televisión Rick & Morty en formatos de tarjetas. Puede buscar los personajes por su ID, con un rango de personajes de hasta 826. Incluye una función de inicio de sesión para acceder y guardar personajes favoritos."
     }
   ]
 }

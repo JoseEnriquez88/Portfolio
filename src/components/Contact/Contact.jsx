@@ -8,9 +8,16 @@ import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 import Footer from "../Footer/Footer";
 import BottomNav from "../NavBarBottom/BottomNav";
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
-import EmailIcon from '@mui/icons-material/Email';
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
+
+const links = {
+  location:
+    "https://www.google.com.ar/maps/place/Corrientes/@-27.4861694,-58.8335862,13z/data=!3m1!4b1!4m6!3m5!1s0x94456b79d5bed36b:0xfa999f1ef3b40646!8m2!3d-27.4692131!4d-58.8306349!16zL20vMDJ0Ymo1?entry=ttu",
+  linkedin: "https://www.linkedin.com/in/joseenriquez80/",
+  mail: "mailto:eenriquez.jose@gmail.com",
+};
 
 const titleVariants = {
   initial: {
@@ -111,30 +118,44 @@ const Contact = () => {
             animate={isInView && "animate"}
             ref={ref}
           >
-            Let's get in touch!
+            Contacta conmigo
           </motion.h1>
         </div>
         <div className={styles.subContainer}>
           <div className={styles.itemsContainer}>
             <ul>
-              <li>
-                <LocationOnIcon
-                  className={styles.icon}
-                  style={{ fontSize: 45 }}
-                />
-                Corrientes, Corrientes. Argentina
-              </li>
-              <li>
-                <PhoneAndroidIcon
-                  className={styles.icon}
-                  style={{ fontSize: 45 }}
-                />
-                +543 794 277204
-              </li>
-              <li>
-                <EmailIcon className={styles.icon} style={{ fontSize: 45 }} />
-                eenriquez.jose@gmail.com
-              </li>
+              <a
+                href={links.location}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <li>
+                  <LocationOnIcon
+                    className={styles.icon}
+                    style={{ fontSize: 45 }}
+                  />
+                  Corrientes, Corrientes. Argentina
+                </li>
+              </a>
+              <a
+                href={links.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <li>
+                  <LinkedInIcon
+                    className={styles.icon}
+                    style={{ fontSize: 45 }}
+                  />
+                  Ir a mi perfil
+                </li>
+              </a>
+              <a href={links.mail} target="_blank" rel="noopener noreferrer">
+                <li>
+                  <EmailIcon className={styles.icon} style={{ fontSize: 45 }} />
+                  eenriquez.jose@gmail.com
+                </li>
+              </a>
             </ul>
           </div>
           <div className={styles.formContainer}>
@@ -157,7 +178,7 @@ const Contact = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Name"
+                placeholder="Nombre"
                 className={styles.input}
               />
               <input
@@ -173,10 +194,10 @@ const Contact = () => {
                 rows={8}
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Message"
+                placeholder="Mensaje"
                 className={styles.textarea}
               />
-              <button className={styles.button}>Send</button>
+              <button className={styles.button}>Enviar</button>
               <ToastContainer className={styles.toaster} />
             </motion.form>
           </div>

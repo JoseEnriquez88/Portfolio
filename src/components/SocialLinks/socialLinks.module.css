@@ -39,6 +39,12 @@
   color: #ececec;
 }
 
+.discordIcon {
+  color: #ececec;
+  font-size: 25px;
+}
+
+
 .textContainer {
   display: flex;
   justify-content: center;

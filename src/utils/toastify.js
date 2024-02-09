@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 
 export const successNotify = () => {
-  toast.success("Thanks for communicating. I'll be in touch soon", {
+  toast.success("Gracias por comunicarte. Estaré en contacto pronto", {
     position: "bottom-right",
     autoClose: 5000,
     hideProgressBar: false,
@@ -14,7 +14,7 @@ export const successNotify = () => {
 };
 
 export const errorNotify = () => {
-  toast.error("There was an error. Please try again", {
+  toast.error("Hubo un error. Por favor intenta de nuevo", {
     position: "bottom-right",
     autoClose: 5000,
     hideProgressBar: false,
@@ -27,7 +27,7 @@ export const errorNotify = () => {
 };
 
 export const warnNotify = () => {
-  toast.warn("Make sure you have completed all fields.", {
+  toast.warn("Asegúrate de haber completado todos los campos.", {
     position: "bottom-right",
     autoClose: 5000,
     hideProgressBar: false,

@@ -40,8 +40,8 @@ const Projects = () => {
           ref={ref}
           animate={isInView && "animate"}
         >
-          <h1 className={styles.title}>Projects</h1>
-          <h2>See my latest works</h2>
+          <h1 className={styles.title}>Proyectos</h1>
+          <h2>Ver mis últimos proyectos</h2>
         </motion.div>
         <div className={styles.projectContainer}>
           <CardsList />

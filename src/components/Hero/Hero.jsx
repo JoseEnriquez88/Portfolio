@@ -68,7 +68,7 @@ const Hero = () => {
             <span className={styles.icon}>
               <CloudDownloadIcon alt="Resume" />
             </span>
-            Resume
+            Descargar CV
           </a>
         </motion.div>
       </div>

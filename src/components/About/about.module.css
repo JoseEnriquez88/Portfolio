@@ -84,7 +84,15 @@
   cursor: pointer;
 }
 
-.socialsContainer .icon:hover {
+.discordIcon {
+  font-size: 25px;
+  transition: color 0.3s ease-in-out;
+  color: #ececec;
+  cursor: pointer;
+}
+
+.socialsContainer .icon:hover,
+.discordIcon:hover {
   color: rgb(34, 196, 112);
 }
 

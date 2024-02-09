@@ -3,7 +3,13 @@ import { useState } from "react";
 import { MagicTabSelect } from "react-magic-motion";
 import { Link } from "react-scroll";
 
-const pillTabs = ["Home", "Projects", "About", "Contact"];
+// const pillTabs = ["Inicio", "Proyectos", "Sobre mí", "Contacto"];
+const pillTabs = [
+  { title: "Inicio", href: "home" },
+  { title: "Sobre mí", href: "about" },
+  { title: "Proyectos", href: "projects" },
+  { title: "Contacto", href: "contact" },
+];
 
 const PillTabs = () => {
   const [hoveredIndex, setHoveredIndex] = useState(0);
@@ -12,7 +18,7 @@ const PillTabs = () => {
     return (
       <Link
         key={i}
-        to={text.toLowerCase()}
+        to={text.href}
         spy={true}
         smooth={true}
         duration={100}
@@ -49,7 +55,7 @@ const PillTabs = () => {
             />
           </MagicTabSelect>
         )}
-        {text}
+        {text.title}
       </Link>
     );
   });

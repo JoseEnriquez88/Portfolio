@@ -6,8 +6,8 @@ import StackSlider from "../StackSlider/StackSlider";
 import socials from "@/utils/socials";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
+import { FaDiscord } from "react-icons/fa";
 
 const titleVariants = {
   initial: {
@@ -95,7 +95,7 @@ const About = () => {
                 animate={isInView && "animate"}
                 ref={ref}
               >
-                About Me
+                Sobre mí
               </motion.h1>
               <div className={styles.bioContainer}>
                 <motion.article
@@ -105,13 +105,13 @@ const About = () => {
                   animate={isInView && "animate"}
                   ref={ref}
                 >
-                  I'm a web developer with strong skills in HTML, CSS, and
-                  JavaScript, enabling me to create appealing interfaces.
-                  Furthermore, I have experience in developing web applications
-                  using technologies such as React, Next, and Redux/Toolkit. On
-                  the server side, I employ Express and relational databases
-                  like SQL, Prisma, and PostgreSQL to ensure efficient
-                  performance and effective data management.
+                  Soy un desarrollador web con fuertes habilidades en HTML, CSS
+                  y JavaScript, lo que me permite crear interfaces atractivas.
+                  Además, tengo experiencia desarrolando con tecnologías como
+                  React, Next y Redux/Toolkit. Del lado del servidor, utilizo
+                  Express y bases de datos relacionales como SQL, Prisma y
+                  PostgreSQL para garantizar un rendimiento eficiente y una
+                  gestión de datos eficaz.
                 </motion.article>
                 <motion.div
                   className={styles.socialsContainer}
@@ -120,17 +120,37 @@ const About = () => {
                   animate={isInView && "animate"}
                   ref={ref}
                 >
-                  <a href={socials.Github}>
-                    <GitHubIcon className={styles.icon} titleAccess="Github"/>
+                  <a
+                    href={socials.Github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Github"
+                  >
+                    <GitHubIcon className={styles.icon} />
                   </a>
-                  <a href={socials.Linkedin}>
-                    <LinkedInIcon className={styles.icon} titleAccess="Linkedin"/>
+                  <a
+                    href={socials.Linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Linkedin"
+                  >
+                    <LinkedInIcon className={styles.icon} />
                   </a>
-                  <a href={socials.Whatsapp}>
-                    <WhatsAppIcon className={styles.icon} titleAccess="Whatsapp"/>
+                  <a
+                    href={socials.Discord}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Discord"
+                  >
+                    <FaDiscord className={styles.discordIcon} />
                   </a>
-                  <a href={socials.Mail}>
-                    <EmailIcon className={styles.icon} titleAccess="Email"/>
+                  <a
+                    href={socials.Mail}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Email"
+                  >
+                    <EmailIcon className={styles.icon} />
                   </a>
                 </motion.div>
               </div>

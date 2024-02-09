@@ -27,7 +27,7 @@ const NavbarBottom = () => {
             <span className={styles.icon} role="img">
               <HomeIcon />
             </span>
-            <span className={styles.title}>Home</span>
+            <span className={styles.title}>Inicio</span>
           </li>
         </Link>
         <Link to="projects">
@@ -35,7 +35,7 @@ const NavbarBottom = () => {
             <span className={styles.icon} role="img">
               <WorkIcon />
             </span>
-            Projects
+            Proyectos
           </li>
         </Link>
 
@@ -44,7 +44,7 @@ const NavbarBottom = () => {
             <span className={styles.icon} role="img">
               <PersonIcon />
             </span>
-            About
+            Sobre mí
           </li>
         </Link>
         <Link to="contact">
@@ -52,14 +52,14 @@ const NavbarBottom = () => {
             <span className={styles.icon} role="img">
               <ContactPageIcon />
             </span>
-            Contact
+            Contacto
           </li>
         </Link>
         <li onClick={handleMenuClick}>
           <span className={styles.icon} role="img">
             <MenuIcon />
           </span>
-          Socials
+          Redes
         </li>
       </ul>
       <SocialsLinks open={socialLinksOpen} onClose={handleCloseSocialLinks} />
