@@ -6,8 +6,8 @@ import { Link } from "react-scroll";
 // const pillTabs = ["Inicio", "Proyectos", "Sobre mí", "Contacto"];
 const pillTabs = [
   { title: "Inicio", href: "home" },
-  { title: "Sobre mí", href: "about" },
   { title: "Proyectos", href: "projects" },
+  { title: "Sobre mí", href: "about" },
   { title: "Contacto", href: "contact" },
 ];
 
