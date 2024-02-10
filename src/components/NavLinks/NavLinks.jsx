@@ -1,9 +1,8 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MagicTabSelect } from "react-magic-motion";
 import { Link } from "react-scroll";
 
-// const pillTabs = ["Inicio", "Proyectos", "Sobre mí", "Contacto"];
 const pillTabs = [
   { title: "Inicio", href: "home" },
   { title: "Proyectos", href: "projects" },
@@ -13,6 +12,20 @@ const pillTabs = [
 
 const PillTabs = () => {
   const [hoveredIndex, setHoveredIndex] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const newIndex = Math.floor(scrollPosition / 1000);
+      setHoveredIndex(newIndex);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const tabsComponents = pillTabs.map((text, i) => {
     return (

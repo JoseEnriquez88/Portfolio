@@ -73,7 +73,7 @@
   transition: color 0.3s ease-in-out;
 }
 
-.itemsContainer ul li:hover  {
+.itemsContainer ul li:hover {
   color: #22c470;
   cursor: pointer;
 }
@@ -196,5 +196,21 @@
   .toaster {
     margin-bottom: -70px;
     margin-left: -6px;
+  }
+}
+
+@media (max-width: 720px) {
+  .formContainer {
+    margin-top: -100px;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 45px;
+  }
+
+  .formContainer {
+    margin-top: -50px;
   }
 }
