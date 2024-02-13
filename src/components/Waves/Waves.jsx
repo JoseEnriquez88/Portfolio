@@ -1,8 +1,9 @@
+import { Fragment } from "react";
 import styles from "./waves.module.css";
 
 const Waves = () => {
   return (
-    <>
+    <Fragment>
       <svg
         className={styles.waves}
         xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +40,7 @@ const Waves = () => {
           <use xlinkHref="#gentle-wave" x="48" y="7" fill="rgb(34,196,112)" />
         </g>
       </svg>
-    </>
+    </Fragment>
   );
 };
 

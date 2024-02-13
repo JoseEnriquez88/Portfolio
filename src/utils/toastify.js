@@ -38,3 +38,16 @@ export const warnNotify = () => {
     theme: "dark",
   });
 };
+
+export const emailWarnNotify = () => {
+  toast.warn("Asegúrate de haber escrito un formato de email válido.", {
+    position: "bottom-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+  });
+};

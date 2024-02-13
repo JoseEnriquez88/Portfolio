@@ -1,31 +1,10 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { cardsContainerVariants, cardsVariants } from "./cardsMotion";
 import projects from "@/utils/projects.json";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import InsertLinkIcon from "@mui/icons-material/InsertLink";
 import styles from "./cardslist.module.css";
-
-const cardsContainerVariants = {
-  animate: {
-    transition: {
-      staggerChildren: 0.5,
-    },
-  },
-};
-
-const cardsVariants = {
-  initial: {
-    y: 0, 
-    opacity: 0,
-  },
-  animate: {
-    y: -25,
-    opacity: 1,
-    transition: {
-      duration: 1.5,
-    },
-  },
-};
 
 const Cards = () => {
   const ref = useRef();

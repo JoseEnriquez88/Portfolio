@@ -2,8 +2,15 @@
 import styles from "./contact.module.css";
 import { useRef, useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { successNotify, warnNotify, errorNotify } from "@/utils/toastify.js";
+import {
+  successNotify,
+  warnNotify,
+  errorNotify,
+  emailWarnNotify,
+} from "@/utils/toastify.js";
 import { ToastContainer } from "react-toastify";
+import { titleVariants } from "./contactMotion";
+import socials from "@/utils/socials";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 import Footer from "../Footer/Footer";
@@ -11,36 +18,7 @@ import BottomNav from "../NavBarBottom/BottomNav";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
-
-const links = {
-  location:
-    "https://www.google.com.ar/maps/place/Corrientes/@-27.4861694,-58.8335862,13z/data=!3m1!4b1!4m6!3m5!1s0x94456b79d5bed36b:0xfa999f1ef3b40646!8m2!3d-27.4692131!4d-58.8306349!16zL20vMDJ0Ymo1?entry=ttu",
-  linkedin: "https://www.linkedin.com/in/joseenriquez80/",
-  mail: "mailto:eenriquez.jose@gmail.com",
-};
-
-const titleVariants = {
-  initial: {
-    y: 0,
-    opacity: 0,
-  },
-  animate: {
-    y: -25,
-    opacity: 1,
-    transition: {
-      duration: 1,
-      staggerChildren: 0.1,
-    },
-  },
-  scrollButton: {
-    opacity: 0,
-    y: 10,
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-    },
-  },
-};
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const Contact = () => {
   const ref = useRef();
@@ -85,6 +63,11 @@ const Contact = () => {
       return;
     }
 
+    if (!emailRegex.test(formData.email)) {
+      emailWarnNotify();
+      return;
+    }
+
     await emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_SERVICE_ID,
@@ -125,7 +108,7 @@ const Contact = () => {
           <div className={styles.itemsContainer}>
             <ul>
               <a
-                href={links.location}
+                href={socials.Location}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -138,7 +121,7 @@ const Contact = () => {
                 </li>
               </a>
               <a
-                href={links.linkedin}
+                href={socials.Linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -150,7 +133,7 @@ const Contact = () => {
                   Ir a mi perfil
                 </li>
               </a>
-              <a href={links.mail} target="_blank" rel="noopener noreferrer">
+              <a href={socials.Mail} target="_blank" rel="noopener noreferrer">
                 <li>
                   <EmailIcon className={styles.icon} style={{ fontSize: 45 }} />
                   eenriquez.jose@gmail.com
