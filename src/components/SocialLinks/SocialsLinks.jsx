@@ -15,7 +15,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const socialIcons = {
-  Location: <LocationOnIcon className={styles.icon} />,
+  Ubicación: <LocationOnIcon className={styles.icon} />,
   Github: <GitHubIcon className={styles.icon} />,
   Linkedin: <LinkedInIcon className={styles.icon} />,
   Discord: <FaDiscord className={styles.discordIcon} />,
