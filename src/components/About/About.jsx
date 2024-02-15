@@ -2,13 +2,17 @@
 import styles from "./about.module.css";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import {
+  titleVariants,
+  articleVariants,
+  socialsVariants,
+} from "@/utils/motions/aboutMotion";
 import StackSlider from "../StackSlider/StackSlider";
 import socials from "@/utils/socials";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import { FaDiscord } from "react-icons/fa";
-import { titleVariants, articleVariants, socialsVariants } from "./aboutMotion";
 
 const About = () => {
   const ref = useRef();

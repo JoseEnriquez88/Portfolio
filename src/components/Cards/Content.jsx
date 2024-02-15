@@ -2,7 +2,10 @@
 import styles from "./cardslist.module.css";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { cardsContainerVariants, cardsVariants } from "./cardsMotion";
+import {
+  cardsContainerVariants,
+  cardsVariants,
+} from "@/utils/motions/cardsMotion";
 import projects from "@/utils/projects.json";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import InsertLinkIcon from "@mui/icons-material/InsertLink";

@@ -1,10 +1,9 @@
 "use client";
 import styles from "./hero.module.css";
 import React, { useState } from "react";
-import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { textVariants } from "./heroMotion";
+import { textVariants } from "@/utils/motions/heroMotion";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 import Waves from "../Waves/Waves";
 

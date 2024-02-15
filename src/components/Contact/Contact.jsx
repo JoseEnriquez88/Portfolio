@@ -9,7 +9,7 @@ import {
   emailWarnNotify,
 } from "@/utils/toastify.js";
 import { ToastContainer } from "react-toastify";
-import { titleVariants } from "./contactMotion";
+import { titleVariants } from "@/utils/motions/contactMotion";
 import socials from "@/utils/socials";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
@@ -130,7 +130,7 @@ const Contact = () => {
                     className={styles.icon}
                     style={{ fontSize: 45 }}
                   />
-                  Ir a mi perfil
+                  LinkedIn
                 </li>
               </a>
               <a href={socials.Mail} target="_blank" rel="noopener noreferrer">

@@ -3,7 +3,7 @@ import styles from "./projects.module.css";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import CardsList from "../Cards/CardsList";
-import { textVariants } from "./projectMotion";
+import { textVariants } from "@/utils/motions/projectsMotion";
 
 const Projects = () => {
   const ref = useRef();
