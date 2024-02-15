@@ -1,5 +1,4 @@
 import styles from "./socialLinks.module.css";
-import socials from "@/utils/socials";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -13,6 +12,13 @@ import { FaDiscord } from "react-icons/fa";
 import EmailIcon from "@mui/icons-material/Email";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+
+const socials = {
+  Discord: "https://discord.com/channels/954778773654478940",
+  Github: "https://github.com/JoseEnriquez88",
+  Linkedin: "https://www.linkedin.com/in/joseenriquez80/",
+  Mail: "mailto:eenriquez.jose@gmail.com",
+};
 
 const socialIcons = {
   Ubicación: <LocationOnIcon className={styles.icon} />,
