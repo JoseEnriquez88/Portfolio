@@ -1,94 +1,30 @@
 "use client";
 import styles from "./contact.module.css";
-import { useRef, useEffect, useState } from "react";
-import { motion, useInView } from "framer-motion";
-import {
-  successNotify,
-  warnNotify,
-  errorNotify,
-  emailWarnNotify,
-} from "@/utils/toastify.js";
-import { ToastContainer } from "react-toastify";
-import { titleVariants } from "@/utils/motions/contactMotion";
-import socials from "@/utils/socials";
-import "react-toastify/dist/ReactToastify.css";
-import emailjs from "@emailjs/browser";
+import Form from "../Form/Form";
+import ItemsContact from "../ItemsContact/ItemsContact";
 import Footer from "../Footer/Footer";
 import BottomNav from "../NavBarBottom/BottomNav";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+import { useRef, useEffect, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { titleVariants } from "@/utils/motions/contactMotion";
 
 const Contact = () => {
   const ref = useRef();
-  const formRef = useRef();
   const isInView = useInView(ref, { threshold: 0.5 });
   const [isMobile, setIsMobile] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
 
   useEffect(() => {
-    const showNav = () => {
+    const hideFooter = () => {
       setIsMobile(window.innerWidth <= 800);
     };
 
-    showNav();
-    window.addEventListener("resize", showNav);
+    hideFooter();
+    window.addEventListener("resize", hideFooter);
 
     return () => {
-      window.removeEventListener("resize", showNav);
+      window.removeEventListener("resize", hideFooter);
     };
   }, []);
-
-  const handleChange = (event) => {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
-  };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    if (
-      formData.name === "" ||
-      formData.email === "" ||
-      formData.message === ""
-    ) {
-      warnNotify();
-      return;
-    }
-
-    if (!emailRegex.test(formData.email)) {
-      emailWarnNotify();
-      return;
-    }
-
-    await emailjs
-      .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
-        formRef.current,
-        process.env.NEXT_PUBLIC_USER_ID
-      )
-      .then(
-        (result) => {
-          setFormData({
-            name: "",
-            email: "",
-            message: "",
-          });
-          successNotify();
-        },
-        (error) => {
-          errorNotify();
-        }
-      );
-  };
 
   return (
     <div className={styles.container}>
@@ -106,83 +42,10 @@ const Contact = () => {
         </div>
         <div className={styles.subContainer}>
           <div className={styles.itemsContainer}>
-            <ul>
-              <a
-                href={socials.Location}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <li>
-                  <LocationOnIcon
-                    className={styles.icon}
-                    style={{ fontSize: 45 }}
-                  />
-                  Corrientes, Corrientes. Argentina
-                </li>
-              </a>
-              <a
-                href={socials.Linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <li>
-                  <LinkedInIcon
-                    className={styles.icon}
-                    style={{ fontSize: 45 }}
-                  />
-                  LinkedIn
-                </li>
-              </a>
-              <a href={socials.Mail} target="_blank" rel="noopener noreferrer">
-                <li>
-                  <EmailIcon className={styles.icon} style={{ fontSize: 45 }} />
-                  eenriquez.jose@gmail.com
-                </li>
-              </a>
-            </ul>
+            <ItemsContact />
           </div>
           <div className={styles.formContainer}>
-            <motion.form
-              ref={formRef}
-              onSubmit={handleSubmit}
-              className={styles.form}
-              initial={{
-                y: 0,
-                opacity: 0,
-              }}
-              animate={{
-                y: -40,
-                opacity: 1,
-              }}
-              transition={{ duration: 2 }}
-            >
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Nombre"
-                className={styles.input}
-              />
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Email"
-                className={styles.input}
-              />
-              <textarea
-                name="message"
-                rows={8}
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Mensaje"
-                className={styles.textarea}
-              />
-              <button className={styles.button}>Enviar</button>
-              <ToastContainer className={styles.toaster} />
-            </motion.form>
+            <Form />
           </div>
         </div>
       </div>
