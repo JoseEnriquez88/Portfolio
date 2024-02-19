@@ -35,8 +35,6 @@
   border-radius: 20px;
   overflow: hidden;
   object-fit: cover;
-  /* transition: filter 0.5s ease-in-out; */
-  /* filter: brightness(0.4); */
 }
 
 .content {
@@ -46,21 +44,21 @@
   align-items: center;
   gap: 1rem;
   width: 50%;
-  background-color: #232323;
-  border: 1px solid rgb(52, 52, 52);
+  background-color: var(--color-background-card-button);
+  border: 1px solid var(--color-border);
   border-radius: 20px;
   transition: border 0.3s ease-in-out;
 }
 
 .content:hover {
-  border: 1px solid rgb(150, 159, 155);
+  border: 1px solid var(--color-border-hover);
   /* border: 1px solid #5c5b5b; */
 }
 
 .heading {
   font-family: Prototype, sans-serif;
   font-size: 30px;
-  color: rgb(34, 196, 112);
+  color: var(--color-primary);
 }
 
 .type {
@@ -80,7 +78,6 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  /* background: red; */
 }
 
 .repoButton,
@@ -93,7 +90,7 @@
   width: 150px;
   padding: 8px;
   border-radius: 20px;
-  border: 1px solid rgb(52, 52, 52);
+  border: 1px solid var(--color-border);
   background: transparent;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
     border 0.3s ease-in-out;
@@ -102,7 +99,7 @@
 
 .repoButton:hover,
 .deployButton:hover {
-  border: 1px solid rgb(150, 159, 155);
+  border: 1px solid var(--color-border-hover);
 }
 
 @media (max-width: 800px) {
@@ -130,7 +127,7 @@
 
   .content:hover,
   .content:active {
-    border: 1px solid rgb(150, 159, 155);
+    border: 1px solid var(--color-border-hover);
   }
 
   .article {

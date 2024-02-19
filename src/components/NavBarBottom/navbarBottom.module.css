@@ -6,11 +6,11 @@
 .container {
   width: 100%;
   bottom: 0;
-  background: #232323;
-  color: #ececec;
+  background: var(--color-background-card-button);
+  color: var(--color-text-color);
   position: fixed;
   padding: 10px;
-  border-top: 1px solid rgb(52, 52, 52);
+  border-top: 1px solid var(--color-border);
   border-radius: 20px 20px 0px 0px;
   font-family: Prototype, sans-serif;
 }
@@ -32,7 +32,7 @@
 }
 
 .iconContainer li:hover {
-  color: #22c470;
+  color: var(--color-primary);
 }
 
 .logo {

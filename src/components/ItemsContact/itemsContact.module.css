@@ -16,15 +16,11 @@
 }
 
 .itemsCntnr li:hover {
-  color: #22c470;
+  color: var(--color-primary);
   cursor: pointer;
 }
 
 .icon {
-  color: #ececec;
+  color: var(--color-text-color);
   transition: color 0.3s ease-in-out;
 }
-
-/* .itemsContainer .icon:hover {
-  color: #22c470;
-} */

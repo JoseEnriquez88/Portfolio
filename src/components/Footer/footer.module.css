@@ -3,9 +3,9 @@
   flex-direction: row;
   justify-content: space-between;
   background: transparent;
-  border-top: 1px solid rgb(52, 52, 52);
+  border-top: 1px solid var(--color-border);
   padding: 1rem;
-  color: #ececec;
+  color: var(--color-text-color);
   width: 100%;
   z-index: 2;
   bottom: 0;
@@ -37,7 +37,8 @@
 }
 
 .linksContainer a:hover {
-  color: #22c470;
+  /* color: #22c470; */
+  color: var(--color-primary);
 }
 
 .logo {
@@ -51,7 +52,7 @@
   align-items: center;
   margin: 0 auto;
   gap: 1rem;
-  color: #8a8484;
+  color: var(--color-copyright);
   margin-bottom: -10px;
   font-size: 12px;
   font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
@@ -102,7 +103,6 @@
 
 @media (max-width: 375px) {
   .linksContainer {
-    /* margin-bottom: 20px; */
     margin-top: -20px;
   }
 }

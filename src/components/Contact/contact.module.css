@@ -15,14 +15,13 @@
   flex-direction: column;
   width: 80%;
   margin: auto;
-  color: #ececec;
+  color: var(--color-text-color);
 }
 
 .textContainer {
   flex: 1;
   display: flex;
   gap: 40px;
-  color: #ececec;
   margin-top: 120px;
   margin-left: -775px;
 }
@@ -33,11 +32,11 @@
   line-height: 88px;
   background: linear-gradient(
     to right,
-    #078343,
-    #11a759,
-    #3bd988,
-    #22c470,
-    #02592c
+    var(--color-green1),
+    var(--color-green2),
+    var(--color-green6),
+    var(--color-green7),
+    var(--color-green8)
   );
   background-clip: text;
   color: transparent;

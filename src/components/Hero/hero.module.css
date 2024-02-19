@@ -7,7 +7,7 @@
   height: calc(100vh);
   overflow: hidden;
   position: relative;
-  color: #ececec;
+  color: var(--color-text-color);
 }
 
 .wrapper {
@@ -33,11 +33,11 @@
   letter-spacing: 2px;
   background: linear-gradient(
     to right,
-    #078343,
-    #11a759,
-    /* #8bf4be, */ /* #5ee9a1, */ /* #bffbdc, */ #3bd988,
-    #22c470,
-    #02592c
+    var(--color-green1),
+    var(--color-green2),
+    var(--color-green6),
+    var(--color-green7),
+    var(--color-green8)
   );
   background-clip: text;
   color: transparent;
@@ -55,18 +55,17 @@
   gap: 5px;
   font-family: Prototype, sans-serif;
   font-weight: 500;
-  color: #ececec;
   width: 200px;
   padding: 15px;
   border-radius: 20px;
-  background-color: #232323;
-  border: 1px solid rgb(52, 52, 52);
+  background-color: var(--color-background-card-button);
+  border: 1px solid var(--color-border);
   transition: border 0.3s ease-in-out;
   cursor: pointer;
 }
 
 .dataContainer a:hover {
-  border: 1px solid rgb(150, 159, 155);
+  border: 1px solid var(--color-border-hover);
 }
 
 .wavesContainer {

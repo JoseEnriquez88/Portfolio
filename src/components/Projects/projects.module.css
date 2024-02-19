@@ -6,7 +6,7 @@
 .container {
   overflow: hidden;
   position: relative;
-  color: #ececec;
+  color: var(--color-text-color);
 }
 
 .wrapper {
@@ -30,7 +30,12 @@
   font-family: Prototype, sans-serif;
   white-space: nowrap;
   letter-spacing: 2px;
-  background: linear-gradient(to right, #078343, #22c470, #02592c);
+  background: linear-gradient(
+    to right,
+    var(--color-green1),
+    var(--color-green7),
+    var(--color-green8)
+  );
   background-clip: text;
   color: transparent;
 }

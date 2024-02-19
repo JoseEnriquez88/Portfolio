@@ -37,7 +37,12 @@ const Waves = () => {
             y="5"
             fill="rgb(34,196,112,0.3)"
           />
-          <use xlinkHref="#gentle-wave" x="48" y="7" fill="rgb(34,196,112)" />
+          <use
+            xlinkHref="#gentle-wave"
+            x="48"
+            y="7"
+            fill="var(--color-primary)"
+          />
         </g>
       </svg>
     </Fragment>

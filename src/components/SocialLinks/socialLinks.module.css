@@ -4,7 +4,7 @@
 }
 
 .drawer {
-  background-color: #232323;
+  background-color: var(--color-background-card-button);
   height: 100vh;
 }
 
@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #ececec;
+  color: var(--color-text-color);
 }
 
 .closeIcon {
@@ -27,7 +27,7 @@
 
 .list {
   margin-top: 50px;
-  color: #ececec;
+  color: var(--color-text-color);
 }
 
 .button {
@@ -36,20 +36,19 @@
 }
 
 .icon {
-  color: #ececec;
+  color: var(--color-text-color);
 }
 
 .discordIcon {
-  color: #ececec;
+  color: var(--color-text-color);
   font-size: 25px;
 }
-
 
 .textContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #8a8484;
+  color: var(--color-copyright);
   font-size: 12px;
   font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif;
   margin-top: 400px;

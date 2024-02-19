@@ -17,8 +17,8 @@
 }
 
 .navbar.active {
-  background: #232323;
-  border-bottom: 1px solid rgb(52, 52, 52);
+  background: var(--color-background-card-button);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .logo {
@@ -39,7 +39,7 @@
   align-items: center;
   gap: 4rem;
   list-style: none;
-  color: #ececec;
+  color: var(--color-text-color);
   font-weight: bold;
   z-index: 2;
 }
@@ -51,7 +51,7 @@
 }
 
 .itemsContainer li:hover {
-  color: rgb(0, 190, 92);
+  color: var(--color-primary);
 }
 
 .iconContainer {
