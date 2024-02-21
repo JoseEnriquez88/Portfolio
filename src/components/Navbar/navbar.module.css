@@ -33,27 +33,6 @@
   filter: brightness(150%);
 }
 
-.itemsContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 4rem;
-  list-style: none;
-  color: var(--color-text-color);
-  font-weight: bold;
-  z-index: 2;
-}
-
-.itemsContainer li {
-  font-size: 20px;
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
-}
-
-.itemsContainer li:hover {
-  color: var(--color-primary);
-}
-
 .iconContainer {
   display: none;
 }

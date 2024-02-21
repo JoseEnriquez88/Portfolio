@@ -2,6 +2,7 @@
 import styles from "./navbar.module.css";
 import { Link } from "react-scroll";
 import NavLinks from "../NavLinks/NavLinks";
+import Nav from "../NavLinks/Nav";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
@@ -36,7 +37,7 @@ const Navbar = () => {
           <img src="/logo.png" alt="logo" className={styles.logo} />
         </Link>
         <div className={styles.itemsContainer}>
-          <NavLinks />
+          <Nav />
         </div>
       </nav>
     </header>

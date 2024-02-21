@@ -39,9 +39,9 @@ const Hero = () => {
             developer
           </h2>
           <a
-            href="/resume/JoseCarlosEnriquezDominguezEnglishResume.pdf"
-            download="englishResume.pdf"
-            aria-label="Download English Resume"
+            href="/resume/spanishResume.pdf"
+            download="spanishResume.pdf"
+            aria-label="Download Spanish Resume"
           >
             <span className={styles.icon}>
               <CloudDownloadIcon alt="Resume" />
