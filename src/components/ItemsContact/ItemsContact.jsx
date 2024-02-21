@@ -12,9 +12,9 @@ const ItemsContact = () => {
   const isInView = useInView(ref, { threshold: 0.5 });
 
   return (
-    <Fragment>
+    <div className={styles.itemsCntnr}>
       <motion.ul
-        className={styles.itemsCntnr}
+        className={styles.ulCntnr}
         variants={itemsVariants}
         initial="initial"
         animate={isInView && "animate"}
@@ -39,7 +39,7 @@ const ItemsContact = () => {
           </li>
         </a>
       </motion.ul>
-    </Fragment>
+    </div>
   );
 };
 

@@ -6,16 +6,23 @@
   gap: 3rem;
 }
 
-.itemsCntnr li {
+.ulCntnr {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 42%;
+}
+
+.ulCntnr li {
   display: flex;
   gap: 1rem;
   align-items: center;
   font-family: Prototype, sans-serif;
   transition: color 0.3s ease-in-out;
-  width: 40%;
+  width: 100%;
 }
 
-.itemsCntnr li:hover {
+.ulCntnr li:hover {
   color: var(--color-primary);
   cursor: pointer;
 }
