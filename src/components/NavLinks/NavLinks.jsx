@@ -36,11 +36,12 @@ const PillTabs = () => {
         smooth={true}
         duration={100}
         onMouseEnter={() => setHoveredIndex(i)}
-        onMouseLeave={() => setHoveredIndex(i)}
+        onMouseLeave={() => setHoveredIndex(null)}
         style={{
           position: "relative",
           padding: "0.5rem 1rem",
           fontSize: "20px",
+          fontFamily: "Prototype, sans-serif",
           color: hoveredIndex === i ? "#000" : "#ececec",
           border: 0,
           borderRadius: "20px",

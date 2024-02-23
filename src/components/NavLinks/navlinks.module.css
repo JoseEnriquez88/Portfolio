@@ -1,31 +1,12 @@
-/* .text {
-  font-size: 20px;
-  cursor: pointer;
-  transition: color 0.3s ease-in-out;
-}
-
-.active {
-  border-radius: 20px;
-  position: absolut;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
-  background-color: var(--color-primary);
-} */
-
-/* .container {
-} */
-
 .container ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
   list-style: none;
   color: var(--color-text-color);
   font-weight: bold;
+  /* font-family: Prototype, sans-serif; */
   z-index: 2;
 }
 
