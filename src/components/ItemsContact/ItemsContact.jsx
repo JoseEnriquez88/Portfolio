@@ -1,4 +1,4 @@
-import { Fragment, useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import styles from "./itemsContact.module.css";
 import LocationOnIcon from "@mui/icons-material/LocationOn";

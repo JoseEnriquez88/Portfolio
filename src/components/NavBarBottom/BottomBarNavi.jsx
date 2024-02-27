@@ -1,10 +1,10 @@
-import { useState } from "react";
 import styles from "./bottomBarNavi.module.css";
+import { Fragment } from "react";
+import { useState } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import WorkIcon from "@mui/icons-material/Work";
 import PersonIcon from "@mui/icons-material/Person";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
-
 const BottomBarNavi = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -15,7 +15,7 @@ const BottomBarNavi = () => {
   };
 
   return (
-    <>
+    <Fragment>
       <div className={styles.container}>
         <ul className={styles.nav}>
           <span
@@ -99,7 +99,7 @@ const BottomBarNavi = () => {
           </filter>
         </defs>
       </svg>
-    </>
+    </Fragment>
   );
 };
 
