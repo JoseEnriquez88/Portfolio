@@ -39,8 +39,9 @@ const Hero = () => {
             developer
           </h2>
           <a
-            href="/resume/spanishResume.pdf"
-            download="spanishResume.pdf"
+            // href="/resume/spanishResume.pdf"
+            // download="spanishResume.pdf"
+            href={process.env.NEXT_RESUME_LINK}
             aria-label="Download Spanish Resume"
           >
             <span className={styles.icon}>
