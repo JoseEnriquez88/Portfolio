@@ -42,6 +42,7 @@ const Hero = () => {
             // href="/resume/spanishResume.pdf"
             // download="spanishResume.pdf"
             href={process.env.NEXT_RESUME_LINK}
+            target="_blank"
             aria-label="Download Spanish Resume"
           >
             <span className={styles.icon}>
