@@ -28,7 +28,7 @@
   width: 100%;
   margin-top: 100px;
   border-radius: 5px;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .subContainer {
@@ -40,6 +40,7 @@
 }
 
 .textContainer {
+  margin-top: 40px;
   width: 50%;
 }
 
@@ -64,7 +65,7 @@
 
 .text {
   text-align: left;
-  font-size: 20px;
+  font-size: 25px;
   width: 100%;
 }
 

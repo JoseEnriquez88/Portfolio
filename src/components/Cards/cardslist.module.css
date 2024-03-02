@@ -57,18 +57,18 @@
 
 .heading {
   font-family: Prototype, sans-serif;
-  font-size: 30px;
+  font-size: 35px;
   color: var(--color-primary);
 }
 
 .type {
   font-family: Prototype, sans-serif;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .article {
   font-family: Prototype, sans-serif;
-  font-size: 17px;
+  font-size: 20px;
   text-align: center;
   width: 65%;
 }

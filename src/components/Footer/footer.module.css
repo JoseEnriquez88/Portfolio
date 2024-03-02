@@ -24,10 +24,11 @@
 .linksContainer {
   display: flex;
   margin: 0 auto;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .linksContainer a {
+  transform: scale(1.4);
   transition: color 0.3s ease-in-out;
   cursor: pointer;
 }

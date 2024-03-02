@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { textVariants } from "@/utils/motions/heroMotion";
-import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
+import CallMadeIcon from "@mui/icons-material/CallMade";
 import Waves from "../Waves/Waves";
 
 const Hero = () => {
@@ -44,10 +44,10 @@ const Hero = () => {
             href={process.env.NEXT_RESUME_LINK}
             target="_blank"
           >
+            Ver resumen
             <span className={styles.icon}>
-              <CloudDownloadIcon alt="Resume" />
+              <CallMadeIcon />
             </span>
-            Descargar CV
           </a>
         </motion.div>
       </div>
