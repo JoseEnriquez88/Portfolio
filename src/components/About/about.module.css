@@ -87,13 +87,19 @@
 
 .icon {
   color: #ececec;
-  font-size: 30px;
+  transform: scale(1.5);
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.linksContainer a {
+  transform: scale(1.4);
   transition: color 0.3s ease-in-out;
   cursor: pointer;
 }
 
 .discordIcon {
-  font-size: 30px;
+  font-size: 40px;
   transition: color 0.3s ease-in-out;
   color: #ececec;
   cursor: pointer;
