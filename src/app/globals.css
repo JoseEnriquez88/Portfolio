@@ -12,7 +12,7 @@
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  scrollbar-color: var(--color-primary) var(--color-background-card-button);
+  /* scrollbar-color: var(--color-primary) var(--color-background-card-button); */
 }
 
 body {
