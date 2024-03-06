@@ -12,7 +12,7 @@
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  /* scrollbar-color: var(--color-primary) var(--color-background-card-button); */
+  scrollbar-color: var(--color-scroll) var(--color-background-card-button);
 }
 
 body {
@@ -34,6 +34,7 @@ a {
   --color-green7: #22c470;
   --color-green8: #02592c;
   --color-primary: #22c070;
+  --color-scroll: #383535;
   --color-text-color: #ececec;
   --color-copyright: #8a8484;
   --color-border: rgb(52, 52, 52);
