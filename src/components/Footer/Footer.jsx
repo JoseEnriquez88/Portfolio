@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
         <div className={styles.textContainer}>
           &copy; {new Date().getFullYear()}: Jose Enriquez
-          <img src="/icon.ico" alt="logo" className={styles.logo} />
+          <img src="/logo.png" alt="logo" className={styles.logo} />
         </div>
       </div>
     </footer>
