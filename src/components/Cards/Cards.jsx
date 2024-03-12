@@ -50,7 +50,7 @@ const Cards = () => {
                       rel="noopener noreferrer"
                       className={styles.repoButton}
                     >
-                      Repo
+                      Ver más
                       <ArrowForwardIcon />
                     </a>
                     {project.deploy && (
