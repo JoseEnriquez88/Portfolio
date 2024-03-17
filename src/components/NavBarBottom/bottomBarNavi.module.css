@@ -8,7 +8,7 @@
 .nav {
   width: 480px;
   height: 70px;
-  background-color: #242426;
+  background-color: var(--color-navbar);
   display: flex;
   list-style: none;
   padding: 10px 0;
@@ -20,7 +20,7 @@
 .navCircle {
   width: 80px;
   height: 80px;
-  background-color: #242426;
+  background-color: var(--color-navbar);
   position: absolute;
   top: -30px;
   margin-left: -45px;
@@ -45,7 +45,7 @@
 }
 
 .nav li a {
-  color: #fff;
+  color: var(--color-text-color);
   text-decoration: none;
   width: 120px;
   display: flex;
@@ -54,7 +54,7 @@
 }
 
 .nav li a:hover {
-  color: rgb(34, 196, 112);
+  color: var(--color-green7);
 }
 
 .navItemIcon {
