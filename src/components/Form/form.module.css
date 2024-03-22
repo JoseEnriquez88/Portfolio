@@ -58,3 +58,17 @@
     margin-left: -6px;
   }
 }
+
+@media (max-width: 400px) {
+  .form {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .input,
+  .textarea,
+  .button {
+    width: 90%;
+  }
+}

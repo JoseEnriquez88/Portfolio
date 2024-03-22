@@ -23,7 +23,7 @@
       "name": "Poke App",
       "type": "Pokedex",
       "repo": "https://github.com/JoseEnriquez88/Pokemon",
-      "deploy": "https://pokemon-jose-enriquez-88.vercel.app/",
+      "deploy": null,
       "image": "/projects/landingPoke.png",
       "description": "Aplicación diseñada para renderizar y crear pokemones personalizados, ofreciendo la capacidad de ordenarlos por tipo, ataque o alfabéticamente. Además, permite filtrar entre los pokémon de la API y los añadidos a la base de datos por el usuario."
     },
