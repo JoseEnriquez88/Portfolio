@@ -9,6 +9,8 @@ export const metadata = {
     "Full Stack",
     "NodeJS",
     "NextJS",
+    "Front End",
+    "Developer",
   ],
 };
 
