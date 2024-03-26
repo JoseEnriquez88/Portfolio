@@ -35,7 +35,7 @@ const ItemsContact = () => {
         <a href={socials.Mail} target="_blank" rel="noopener noreferrer">
           <li>
             <EmailIcon className={styles.icon} style={{ fontSize: 45 }} />
-            eenriquez.jose@gmail.com
+            Mi email
           </li>
         </a>
       </motion.ul>
