@@ -91,9 +91,15 @@ const About = () => {
                 </motion.div>
               </div>
             </div>
-            <div className={styles.imageContainer}>
+            <motion.div
+              className={styles.imageContainer}
+              variants={articleVariants}
+              initial="initial"
+              animate={isInView && "animate"}
+              ref={ref}
+            >
               <img src="/SVG/about.png" alt="image" className={styles.image} />
-            </div>
+            </motion.div>
           </div>
           <div className={styles.stackContainer}>
             <StackSlider />
