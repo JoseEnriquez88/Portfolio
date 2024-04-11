@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Navbar from "@/components/Navbar/Navbar";
 import Hero from "@/components/Hero/Hero";
 import Projects from "@/components/Projects/Projects";
@@ -6,7 +7,7 @@ import Contact from "@/components/Contact/Contact";
 
 export default function Home() {
   return (
-    <div>
+    <Fragment>
       <section id="home">
         <Navbar />
         <Hero />
@@ -20,6 +21,6 @@ export default function Home() {
       <section id="contact">
         <Contact />
       </section>
-    </div>
+    </Fragment>
   );
 }
