@@ -27,7 +27,7 @@ const Hero = () => {
           <h2>
             <span className={styles.seniority}>
               <Typewriter
-                words={["Full stack", "React"]}
+                words={["Full stack", "React", "Web"]}
                 loop={false}
                 cursor
                 typeSpeed={80}
