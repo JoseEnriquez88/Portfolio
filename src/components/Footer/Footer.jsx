@@ -6,10 +6,22 @@ import EmailIcon from "@mui/icons-material/Email";
 import { FaDiscord } from "react-icons/fa";
 
 const socials = {
-  discord: "https://discord.com/channels/954778773654478940",
-  github: "https://github.com/JoseEnriquez88",
-  linkedin: "https://www.linkedin.com/in/joseenriquez80/",
-  mail: "mailto:eenriquez.jose@gmail.com",
+  github: {
+    url: "https://github.com/JoseEnriquez88",
+    icon: <GitHubIcon />,
+  },
+  linkedin: {
+    url: "https://www.linkedin.com/in/joseenriquez80/",
+    icon: <LinkedInIcon />,
+  },
+  discord: {
+    url: "https://discord.com/channels/954778773654478940",
+    icon: <FaDiscord className={styles.discordIcon} />,
+  },
+  mail: {
+    url: "mailto:eenriquez.jose@gmail.com",
+    icon: <EmailIcon alt="Email" className={styles.icon} />,
+  },
 };
 
 const Footer = () => {
@@ -17,18 +29,11 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.linksContainer}>
-          <a href={socials.github} rel="noopener noreferrer">
-            <GitHubIcon />
-          </a>
-          <a href={socials.linkedin} rel="noopener noreferrer">
-            <LinkedInIcon />
-          </a>
-          <a href={socials.whatsapp} rel="noopener noreferrer">
-            <FaDiscord className={styles.discordIcon} />
-          </a>
-          <a href={socials.mail} rel="noopener noreferrer">
-            <EmailIcon alt="Email" className={styles.icon} />
-          </a>
+          {Object.values(socials).map((social, index) => (
+            <a key={index} href={social.url} target="_blank">
+              {social.icon}
+            </a>
+          ))}
         </div>
         <div className={styles.textContainer}>
           &copy; {new Date().getFullYear()}: Jose Enriquez
